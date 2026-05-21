@@ -1,0 +1,256 @@
+---
+title: "Why Data Cleaning Matters"
+subtitle: "Methods and Tools in R"
+author: "Cagan Goksay"
+institute: "Fresenius University of Applied Sciences"
+date: today
+
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    transition: fade
+    html:
+      embed-resources: true
+      self-contained-math: true
+
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## The Critical Importance of Data Cleaning
+
+::: {layout-halign="center"}
+![](images/clipboard-3837974185.png){width="85%" fig-align="center"}
+:::
+
+# Why?
+
+**Decision Making**: Poor data leads to wrong business decisions or flawed academic conclusions.
+
+**Model Performance**: Machine learning models cannot learn effectively from "noisy" or messy data.
+
+**Visualization Integrity**: Outliers or inconsistent categories can distort charts, leading to a false representation of reality.
+
+## Common Data Issues (What are we cleaning?)
+
+<font size="6">**Missing Values (NA):** Gaps in the dataset where information was not recorded.
+
+**Outliers**: Extreme values that sit far outside the normal range and can skew statistical averages. Inconsistent Formats: For example, dates written as "01/05/2026" and "May 1st" in the same column.
+
+**Duplicate Records**: The same observation being recorded multiple times.
+
+**Syntax Errors**: Case sensitivity issues (e.g., "Germany," "germany," and "Germany ") being treated as three different categories.</font>
+
+## Key Tools in R (The Library Ecosystem)
+
+::: {style="font-size: 80%;"}
+| Package | Purpose |
+|:-----------------------------------|:-----------------------------------|
+| **tidyverse** | The primary framework for data science (includes dpyr and tidyr). |
+| **janitor** | Excellent for cleaning column names and creating quick frequency tables. |
+| **lubridate** | The industry standard for fixing date and time formats. |
+| **stringr** | Used for cleaning and manipulating text (string) data. |
+| **naniar** | Specifically designed to visualize and analyze missing values (NAs). |
+:::
+
+## Dataset Overview
+
+<font size="6"> The dataset used in this project contains multiple variables related to player performance. These include:Rank, Player, Team, Expected Assists, Actual Assists, Minutes Played, Matches, Played, Country.
+
+```{r}
+my_data <- read.csv("ASSIST_DATA.csv")
+md <- my_data
+```
+
+- `head(md)` displays the first rows
+
+- `tail(md)` displays the last rows
+
+- `View(md)` opens the dataset in a spreadsheet format </font>
+
+# Tidyverse Package
+
+The project uses the **tidyverse** package, which provides powerful tools for data manipulation.
+
+```{r}
+#install.packages("tidyverse")
+library("tidyverse")
+```
+
+# Filtering
+
+```{r}
+md |> 
+  select(Player, Team, Country) |> 
+  filter(Country == "GER" & Team == "Borussia Dortmund") |> 
+  arrange(Player)
+```
+
+## Data Structure
+
+```{r}
+glimpse(md)
+class(md$Country)
+unique(md$Country)
+```
+
+## Descriptive Statistics
+
+```{r}
+mean(md$Actual.Assists, na.rm = TRUE)
+```
+
+This calculates the average number of actual assists while ignoring missing values. It gives a quick understanding of overall player performance.
+
+# Missing Values
+
+Removing Missing Values
+
+```{r}
+#| echo: true
+md |> 
+  select(Rank, Team, Expected.Assists, Actual.Assists) |> 
+  na.omit()
+```
+
+# Identifying Missing Data
+
+```{r}
+md |> 
+  select(Rank, Player, Expected.Assists, Actual.Assists) %>%
+  filter(!complete.cases(.))
+```
+
+## Data Cleaning and Imputation
+
+```{r}
+md |> 
+  select(Rank, Player, Team,
+         Expected.Assists, Actual.Assists) %>%
+  filter(!complete.cases(.)) %>%
+  mutate(Team = ifelse(is.na(Team) | Team ==
+                         "" | Team == " ", "none", Team)) %>%
+  mutate(Expected.Assists = 
+           ifelse(is.na(Expected.Assists) | Expected.Assists == 
+                    "" | Expected.Assists == " ", 0, Expected.Assists)) |> 
+  mutate(Actual.Assists = 
+           ifelse(is.na(Actual.Assists) | Actual.Assists == 
+                    "" | Actual.Assists == " ", 0, Actual.Assists))
+```
+
+<font size="6"> This R code selects specific columns, filters for rows containing missing (NA) or blank values, and then updates those rows by replacing missing team names with "none" and missing assist stats with 0.
+
+_Note: For demonstration purposes, missing numaric values were temporarily replaced with 0._</font>
+
+# Duplicate Data
+
+```{r}
+#| echo: true
+md_duplicates <- md %>%
+  filter(duplicated(Player) | duplicated(Player, fromLast = TRUE)) %>%
+  arrange(Player)
+
+
+md_duplicates |> 
+    select(Rank, Player, Team, Expected.Assists, Actual.Assists) 
+```
+
+<font size="6">This code identifies and sorts duplicate players who appear multiple times in the dataset, and then selects specific performance and team columns to display for those duplicate entries.</font>
+
+# Real Life Example- Jungheinrich(RLE)
+
+In 2025, while delivering forklift practical training for Jungheinrich, I manually recorded training results in Excel. Over time, the file became inconsistent: some exam results were missing, some contained characters like “?”, “.” or “-” instead of numbers, location names appeared in different formats, and dates/names were not standardized. My supervisor asked me to clean and standardize the dataset for reporting.
+
+# RLE Table
+
+```{r}
+#| echo: false
+#| results: asis
+
+jung <- read.csv("jungheinrich.csv", stringsAsFactors = FALSE)
+
+tab <- jung |> 
+  select(NAMES, TRAINING.DATE, AREA, PRACTICAL.EXAM.RESULTS)
+
+cat("
+<div style='
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 400px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  padding: 5px;
+'>
+")
+knitr::kable(tab)
+cat("</div>")
+
+
+```
+
+## Steps of RLE
+In this real-life case, using R:
+
+Detected invalid or non-numeric exam results
+
+Collected incomplete entries into a “noneprufung” list
+
+Standardized inconsistent location names
+
+Converted all text columns to Title Case
+
+Classified scores ≥ 66 as “Passed” and others as “Failed”
+
+Sorted the dataset by date and reassigned ID numbers
+
+This experience clearly demonstrated how essential data cleaning is in real operational environments and how reliable data directly improves decision-making.
+
+# Result of Cleaning
+
+```{r}
+#| echo: false
+#| results: asis
+
+jungcl <- read.csv("jungclean.csv", stringsAsFactors = FALSE)
+
+cat("
+<div style='
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 450px;
+  width: 100%;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  padding: 6px;
+  white-space: nowrap;
+'>
+")
+
+knitr::kable(jungcl)
+
+cat("</div>")
+
+```
+
+# Key Takeaways
+
+- Data cleaning improves accuracy
+- Missing values should be checked carefully
+- Duplicate rows may distort results
+- Clean datasets improve reliability
+
+# Conclusion
+
+This project demonstrates how R and tidyverse tools support data cleaning and preprocessing workflows.
+
+## Task:
+
+A teacher has prepared a class list of students in an Excel file. However, while creating the list, the teacher accidentally added some students multiple times. Since the teacher is not familiar with the R programming language, they would have to check each entry manually, which is very time-consuming.
+
+The teacher asks for your help. Your task is to use the R programming language to identify and clean the dataset by detecting duplicate entries.
+
+Using the data cleaning techniques you have learned in R (such as duplicate detection), remove the repeated student records from the dataset. After completing the cleaning process, determine how many unique students are actually in the class and report this number back to the teacher.
+

@@ -1,0 +1,379 @@
+---
+title: "Why Data Cleaning Matters: Methods and Tools in R"
+
+subtitle: "Data Analysis for Decision-Making (SS 2026)"
+
+author:
+
+  - name: "Cagan Goksay"
+
+    affiliations:
+
+      - name: "Fresenius University of Applied Sciences"
+
+    email: "goeksay.cagan@stud.hs-fresenius.de"
+
+date: today
+
+date-format: long
+
+format:
+
+  pdf:
+
+    toc: false
+
+abstract: |
+  \centering
+
+  \textbf{Fresenius University of Applied Sciences}
+
+  goeksay.cagan@stud.hs-fresenius.de
+
+  \vspace{0.5cm}
+
+  Abstrack : Data cleaning is essential in data analysis as it ensures accuracy,
+  consistency, and reliability of results, and R provides powerful
+  methods and tools to efficiently detect, correct, and preprocess
+  imperfect datasets.
+
+bibliography: liti.bib
+csl: apa.csl
+reference-location: document
+---
+
+# 1. Introduction: Bundesliga 23/24 Team & Player Stats
+
+In modern data analysis, the quality of insights heavily depends on the quality of the underlying data. Raw datasets are often incomplete, inconsistent, or contain errors that can significantly affect analytical results. Therefore, data cleaning is a crucial step before performing any meaningful analysis(@Huber2).
+
+Decision Making: Poor data leads to wrong business decisions or flawed academic conclusions. Model Performance: Machine learning models cannot learn effectively from "noisy" or messy data. Visualization Integrity: Outliers or inconsistent categories can distort charts, leading to a false representation of reality.
+
+Common Data Issues:
+
+Missing Values (NA): Gaps in the dataset where information was not recorded.
+
+Outliers: Extreme values that sit far outside the normal range and can skew statistical averages.
+
+Inconsistent Formats: For example, dates written as "01/05/2026" and "May 1st" in the same column.
+
+Duplicate Records: The same observation being recorded multiple times.
+
+Syntax Errors: Case sensitivity issues (e.g., "Germany," "germany," and "Germany ") being treated as three different categories.
+
+This project focuses on a football dataset(@bundesliga) that includes performance-related variables such as expected assists, actual assists, minutes played, and match participation. The objective is to demonstrate how data cleaning and preprocessing techniques in R can improve data reliability and enable more accurate interpretations.
+
+## The Library Ecosystem
+
+1.  tidyverse: It is a collection of harmonized packages designed specifically for data science. It significantly simplifies data manipulation, visualization, and analysis processes by using a consistent syntax. It includes fundamental libraries like dplyr and tidyr.
+
+2.  janitor: It provides excellent tools for quickly cleaning and formatting dirty data. It is highly practical for converting messy column names into a clean format and generating quick frequency tables. It saves a lot of time during the data preparation stage.
+
+3.  lubridate: It is a package that makes working with date and time data in R much easier and effortless. It allows you to quickly parse, manipulate, and calculate time intervals from various date formats. It is considered the industry standard for time-series data handling.
+
+4.  stringr: It is a powerful library used for formatting, cleaning, and manipulating text (string) data. It simplifies searching and replacing text by making it easier to work with regular expressions (regex). It handles complex operations on character strings using consistent functions.
+
+5.  naniar: It is specifically designed to visualize and analyze missing values (NAs) in data sets. It offers aesthetic plots and functions that make it easy to understand the structure and distribution of missing data. It plays a critical role during the missing data analysis process.
+
+# 2. Dataset Overview
+
+The dataset used in this project contains multiple variables related to player performance. These include:
+
+- Rank
+
+- Player
+
+- Team
+
+- Expected Assists
+
+- Actual Assists
+
+- Minutes Played
+
+- Matches Played
+
+- Country
+
+The dataset provides a foundation for analyzing player creativity and performance efficiency by comparing expected assists (a predictive metric) with actual assists (real outcomes).
+
+# 3. Data Import and Initial Exploration
+
+The first step in the analysis is importing the dataset into R:
+
+```{r}
+my_data <- read.csv("ASSIST_DATA.csv")
+md <- my_data
+```
+
+Basic functions such as `head()`, `tail()`, and `View()` are used to inspect the dataset(@learnmore):
+
+- `head(md)` displays the first rows
+
+- `tail(md)` displays the last rows
+
+- `View(md)` opens the dataset in a spreadsheet format
+
+These functions help to quickly understand the structure and detect obvious issues.
+
+# 4. Data Manipulation with tidyverse
+
+The project uses the **tidyverse** package, which provides powerful tools for data manipulation.
+
+```{r}
+#| code-overflow: scroll
+#| include: false
+#install.packages("tidyverse")
+library("tidyverse")
+```
+
+A filtering operation is applied:
+
+```{r}
+md |> 
+  select(Player, Team, Country) |> 
+  filter(Country == "GER" & Team == "Borussia Dortmund") |> 
+  arrange(Player)
+```
+
+This code:
+
+- Selects relevant columns
+
+- Filters players based on country and team
+
+- Sorts the results alphabetically
+
+This demonstrates how to extract meaningful subsets from a larger dataset.
+
+# 5. Understanding Data Structure
+
+```{r}
+glimpse(md)
+class(md$Country)
+unique(md$Country)
+```
+
+- `glimpse()` provides a compact overview of all variables
+
+- `class()` identifies the data type (e.g., character, numeric)
+
+- `unique()` shows all distinct values in a column
+
+These steps are essential for identifying inconsistencies or incorrect data types.
+
+# 6. Descriptive Statistics
+
+Basic statistical analysis is performed:
+
+```{r}
+mean(md$Actual.Assists, na.rm = TRUE)
+```
+
+This calculates the average number of actual assists while ignoring missing values. It gives a quick understanding of overall player performance.
+
+# 7. Handling Missing Values
+
+Missing values (NA) can distort analysis results. Therefore, they must be handled properly.
+
+Removing Missing Values
+
+```{r}
+#| include: false
+md |> 
+  select(Rank, Team, Expected.Assists, Actual.Assists) |> 
+  na.omit()
+```
+
+This removes rows with missing values.
+
+## Identifying Missing Data
+
+```{r}
+md |> 
+  select(Rank, Player, Expected.Assists, Actual.Assists) %>%
+  filter(!complete.cases(.))
+```
+
+This identifies rows that contain missing values.
+
+# 8. Data Cleaning and Imputation
+
+To handle missing values:
+
+```{r}
+md |> 
+  select(Rank, Player, Team,
+         Expected.Assists, Actual.Assists) %>%
+  filter(!complete.cases(.)) %>%
+  mutate(Team = ifelse(is.na(Team) | Team ==
+                         "" | Team == " ", "none", Team)) %>%
+  mutate(Expected.Assists = 
+           ifelse(is.na(Expected.Assists) | Expected.Assists == 
+                    "" | Expected.Assists == " ", 0, Expected.Assists)) |> 
+  mutate(Actual.Assists = 
+           ifelse(is.na(Actual.Assists) | Actual.Assists == 
+                    "" | Actual.Assists == " ", 0, Actual.Assists))
+```
+
+- Missing character values → replaced with "none"
+
+- Missing numeric values → replaced with 0
+
+*Note: For demonstration purposes, missing numaric values were temporarily replaced with 0.*
+
+This ensures consistency and prevents errors in further analysis.
+
+# 9. Detecting Duplicate Data
+
+Duplicate records can bias results. The following code identifies duplicates:
+
+```{r}
+#| echo: true
+md_duplicates <- md %>%
+  filter(duplicated(Player) | duplicated(Player, fromLast = TRUE)) %>%
+  arrange(Player)
+
+
+md_duplicates |> 
+    select(Rank, Player, Team, Expected.Assists, Actual.Assists) 
+```
+
+This helps ensure that each player is represented correctly in the dataset.
+
+# Real Life Example
+
+In 2025, while delivering forklift practical training for Jungheinrich, I manually recorded training results in Excel. Over time, the file became inconsistent: some exam results were missing, some contained characters like “?”, “.” or “-” instead of numbers, location names appeared in different formats, and dates/names were not standardized. My supervisor asked me to clean and standardize the dataset for reporting.
+
+```{r}
+#| echo: false
+jung <- read.csv("jungheinrich.csv", stringsAsFactors = FALSE)
+jung |> 
+  head(10) |> 
+  knitr::kable()
+```
+
+In this real-life case, using R:
+
+Detected invalid or non-numeric exam results
+
+Collected incomplete entries into a “noneprufung” list
+
+Standardized inconsistent location names
+
+Converted all text columns to Title Case
+
+Classified scores ≥ 66 as “Passed” and others as “Failed”
+
+Sorted the dataset by date and reassigned ID numbers
+
+This experience clearly demonstrated how essential data cleaning is in real operational environments and how reliable data directly improves decision-making.
+
+```{r}
+jung <- read.csv("jungheinrich.csv", stringsAsFactors = FALSE)
+library("tidyverse")
+
+# Turn practical results into character traits.
+jung$PRACTICAL.EXAM.RESULTS <- as.character(jung$PRACTICAL.EXAM.RESULTS)
+
+noneprufung <- data.frame()
+
+i <- 1
+n <- nrow(jung)
+
+while (i <= n) {
+  
+  pratik_raw <- jung$PRACTICAL.EXAM.RESULTS[i]
+  
+  # tries to convert it to an integer
+  pratik_int <- suppressWarnings(as.integer(pratik_raw))
+  
+  # If it is not an integer → add the entire row to the noneprufung list
+  if (is.na(pratik_int)) {
+    noneprufung <- rbind(noneprufung, jung[i, ])
+  }
+  
+  i <- i + 1
+}
+
+# Find the indices of the lines within noneprufung
+sil_index <- as.numeric(rownames(noneprufung))
+
+# Delete these lines from the Jung list
+jung_clean <- jung[-sil_index, ]
+
+jung_clean$AREA <- ifelse(
+  grepl("^Avrupa 2", jung_clean$AREA, ignore.case = TRUE),
+  "Avrupa 2",
+  jung_clean$AREA
+)
+
+jung_clean <- jung_clean %>% 
+  mutate(across(
+    where(is.character),
+    ~ str_to_title(.)
+  ))
+
+jung_clean <- jung_clean %>% 
+  mutate(
+    PRACTICAL.EXAM.RESULTS = as.numeric(PRACTICAL.EXAM.RESULTS),
+    RESULT = if_else(PRACTICAL.EXAM.RESULTS >= 66, "Passed", "Failed")
+  )
+
+jung_clean <- jung_clean %>% 
+  arrange(as.Date(TRAINING.DATE, format = "%d-%m-%y")) %>% 
+  mutate(ID = row_number()) %>% 
+  relocate(ID, .before = 1) |> 
+  select(ID, X, NAMES, TRAINING.DATE, AREA, PRACTICAL.EXAM.RESULTS)
+
+jung_clean %>% 
+  slice(c(1:10, (n() - 9):n()))
+
+
+```
+
+# 10. Conclusion
+
+This project highlights the importance of data cleaning in the data analysis process. Using R and tidyverse tools, the dataset was explored, cleaned, and prepared for analysis. The cleaning process revealed that football performance datasets may contain incomplete player statistics and duplicated entries, which can directly affect comparative performance analysis.
+
+Key takeaways include:
+
+- Data cleaning improves accuracy and reliability
+
+- Missing values must be handled carefully
+
+- Duplicate data should be identified and removed
+
+- Proper preprocessing enables meaningful insights
+
+Overall, this project demonstrates how structured data preparation leads to more trustworthy and interpretable analytical results.
+
+# 11. Affidavit
+
+I hereby affirm that this submitted paper was authored unaided and solely by me. Additionally, no other sources than those in the reference list were used. Parts of this paper, including tables and figures, that have been taken either verbatim or analogously from other works have in each case been properly cited with regard to their origin and authorship. This paper either in parts or in its entirety, be it in the same or similar form, has not been submitted to any other examination board and has not been published.
+
+I acknowledge that the university may use plagiarism detection software to check my thesis. I agree to cooperate with any investigation of suspected plagiarism and to provide any additional information or evidence requested by the university.
+
+## Checklist
+
+- [x] The handout contains 3–5 pages of text.
+- [x] The submission contains the Quarto file of the handout.
+- [x] The submission contains the Quarto file of the presentation.
+- [x] The submission contains the HTML file of the handout.
+- [x] The submission contains the HTML file of the presentation.
+- [x] The submission contains the PDF file of the handout.
+- [x] The submission contains the PDF file of the presentation.
+- [x] The title page of the presentation and the handout contain personal details (name, email, matriculation number).
+- [x] The handout contains a bibliography, created using BibTeX with an APA citation style.
+- [x] Either the handout or the presentation contains R code that proves expertise in coding.
+- [x] The filled out Affidavit.
+- [x] The link to the presentation and the handout published on GitHub.
+
+<br>
+
+*Name:* Cagan Goksay\
+*Date:* 26.05.2026\
+*Place:* Cologne, Germany
+
+:::
+
+# 12. References 

@@ -1,0 +1,201 @@
+---
+title: "Why Data Cleaning Matters: Methods and Tools in R"
+subtitle: "Data Analysis for Decision-Making (SS 2026)"
+author:
+  - name: "Cagan Goksay (Matriculation Nr.: 401004542)"
+    corresponding: true
+    affiliations:
+      - name: Fresenius University of Applied Science
+    email: goeksay.cagan@stud.hs-fresenius.de
+date: today
+date-format: long
+abstract: |
+  Data cleaning is essential in data analysis as it ensures accuracy, consistency, and reliability of results, and R provides powerful methods and tools to efficiently detect, correct, and preprocess imperfect datasets.
+
+format: pdf
+bibliography: liti.bib
+csl: apa.csl
+reference-location: document
+---
+
+# 1. Introduction: Bundesliga 23/24 Team & Player Stats
+
+In modern data analysis, the quality of insights heavily depends on the quality of the underlying data. Raw datasets are often incomplete, inconsistent, or contain errors that can significantly affect analytical results. Therefore, data cleaning is a crucial step before performing any meaningful analysis.
+
+This project focuses on a football dataset that includes performance-related variables such as expected assists, actual assists, minutes played, and match participation. The objective is to demonstrate how data cleaning and preprocessing techniques in R can improve data reliability and enable more accurate interpretations.
+
+# 2. Dataset Overview
+
+The dataset used in this project contains multiple variables related to player performance. These include:
+
+- Rank
+
+- Player
+
+- Team
+
+- Expected Assists
+
+- Actual Assists
+
+- Minutes Played
+
+- Matches Played
+
+- Country
+
+The dataset provides a foundation for analyzing player creativity and performance efficiency by comparing expected assists (a predictive metric) with actual assists (real outcomes).
+
+# 3. Data Import and Initial Exploration
+
+The first step in the analysis is importing the dataset into R:
+
+```{r}
+my_data <- read.csv("ASSIST_DATA.csv")
+md <- my_data
+```
+
+Basic functions such as `head()`, `tail()`, and `View()` are used to inspect the dataset:
+
+- `head(md)` displays the first rows
+
+- `tail(md)` displays the last rows
+
+- `View(md)` opens the dataset in a spreadsheet format
+
+These functions help to quickly understand the structure and detect obvious issues.
+
+# 4. Data Manipulation with tidyverse
+
+The project uses the **tidyverse** package, which provides powerful tools for data manipulation.
+
+```{r}
+#install.packages("tidyverse")
+library("tidyverse")
+```
+
+A filtering operation is applied:
+
+```{r}
+md |> 
+  select(Player, Team, Country) |> 
+  filter(Country == "GER" & Team == "Borussia Dortmund") |> 
+  arrange(Player)
+```
+
+This code:
+
+- Selects relevant columns
+
+- Filters players based on country and team
+
+- Sorts the results alphabetically
+
+This demonstrates how to extract meaningful subsets from a larger dataset.
+
+# 5. Understanding Data Structure
+
+```{r}
+glimpse(md)
+class(md$Country)
+unique(md$Country)
+```
+
+- `glimpse()` provides a compact overview of all variables
+
+- `class()` identifies the data type (e.g., character, numeric)
+
+- `unique()` shows all distinct values in a column
+
+These steps are essential for identifying inconsistencies or incorrect data types.
+
+# 6. Descriptive Statistics
+
+Basic statistical analysis is performed:
+
+```{r}
+mean(md$Actual.Assists, na.rm = TRUE)
+```
+
+This calculates the average number of actual assists while ignoring missing values. It gives a quick understanding of overall player performance.
+
+# 7. Handling Missing Values
+
+Missing values (NA) can distort analysis results. Therefore, they must be handled properly.
+
+Removing Missing Values
+
+```{r}
+#| include: false
+md |> 
+  select(Rank, Team, Expected.Assists, Actual.Assists) |> 
+  na.omit()
+```
+
+This removes rows with missing values.
+
+## Identifying Missing Data
+
+```{r}
+md |> 
+  select(Rank, Player, Expected.Assists, Actual.Assists) %>%
+  filter(!complete.cases(.))
+```
+
+This identifies rows that contain missing values.
+
+# 8. Data Cleaning and Imputation
+
+To handle missing values:
+
+```{r}
+md |> 
+  select(Rank, Player, Team, Expected.Assists, Actual.Assists) %>%
+  filter(!complete.cases(.)) %>%
+  mutate(Team = ifelse(is.na(Team) | Team == "" | Team == " ", "none", Team)) %>%
+  mutate(Expected.Assists = ifelse(is.na(Expected.Assists) | Expected.Assists == "" | Expected.Assists == " ", 0, Expected.Assists)) |> 
+  mutate(Actual.Assists = ifelse(is.na(Actual.Assists) | Actual.Assists == "" | Actual.Assists == " ", 0, Actual.Assists))
+```
+
+- Missing character values → replaced with "none"
+
+- Missing numeric values → replaced with 0 
+
+_Note: For demonstration purposes, missing numaric values were temporarily replaced with 0._
+
+This ensures consistency and prevents errors in further analysis.
+
+# 9. Detecting Duplicate Data
+
+Duplicate records can bias results. The following code identifies duplicates:
+
+```{r}
+#| echo: true
+md_duplicates <- md %>%
+  filter(duplicated(Player) | duplicated(Player, fromLast = TRUE)) %>%
+  arrange(Player)
+
+
+md_duplicates |> 
+    select(Rank, Player, Team, Expected.Assists, Actual.Assists) 
+```
+
+This helps ensure that each player is represented correctly in the dataset.
+
+# 10. Conclusion
+
+This project highlights the importance of data cleaning in the data analysis process. Using R and tidyverse tools, the dataset was explored, cleaned, and prepared for analysis. The cleaning process revealed that football performance datasets may contain incomplete player statistics and duplicated entries, which can directly affect comparative performance analysis.
+
+Key takeaways include:
+
+- Data cleaning improves accuracy and reliability
+
+- Missing values must be handled carefully
+
+- Duplicate data should be identified and removed
+
+- Proper preprocessing enables meaningful insights
+
+Overall, this project demonstrates how structured data preparation leads to more trustworthy and interpretable analytical results.
+
+:::
