@@ -8,7 +8,7 @@ format:
 ---
 
 <style>
-body {
+body {x
   font-family: Arial, sans-serif;
   background: #f7f7f7;
 }
@@ -89,6 +89,14 @@ This website provides access to the presentation, handout, source files, and dat
 <a href="handout1.pdf" class="secondary">Download Handout PDF</a>
 
 <a href="sourcecode.R" class="secondary">View R Source Code</a>
+
+<br>
+
+<a href="https://github.com/cagangoksay/datacleaning" 
+   class="secondary"
+   target="_blank">
+   View GitHub Repository
+</a>
 
 </div>
 
