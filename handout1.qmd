@@ -17,11 +17,7 @@ date: today
 
 date-format: long
 
-format:
-
-  pdf:
-
-    toc: false
+format: html
 
 abstract: |
   \centering
