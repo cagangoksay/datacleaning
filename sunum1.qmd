@@ -214,7 +214,7 @@ This experience clearly demonstrated how essential data cleaning is in real oper
 #| echo: false
 #| results: asis
 
-jungcl <- read.csv("jungclean.csv", stringsAsFactors = FALSE)
+jungcl <- read.csv("jungRLE.csv", stringsAsFactors = FALSE)
 
 cat("
 <div style='
@@ -252,5 +252,5 @@ A teacher has prepared a class list of students in an Excel file. However, while
 
 The teacher asks for your help. Your task is to use the R programming language to identify and clean the dataset by detecting duplicate entries.
 
-Using the data cleaning techniques you have learned in R (such as duplicate detection), remove the repeated student records from the dataset. After completing the cleaning process, determine how many unique students are actually in the class and report this number back to the teacher..
+Using the data cleaning techniques you have learned in R (such as duplicate detection), remove the repeated student records from the dataset. After completing the cleaning process, determine how many unique students are actually in the class and report this number back to the teacher.t.
 

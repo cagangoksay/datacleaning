@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.9.37">
 
   <meta name="author" content="Cagan Goksay">
-  <meta name="dcterms.date" content="2026-05-21">
+  <meta name="dcterms.date" content="2026-05-25">
   <title>Why Data Cleaning Matters</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -211,7 +211,7 @@ Cagan Goksay
     </div>
 </div>
 
-  <p class="date">2026-05-21</p>
+  <p class="date">2026-05-25</p>
 </section>
 <section id="the-critical-importance-of-data-cleaning" class="slide level2">
 <h2>The Critical Importance of Data Cleaning</h2>
@@ -3573,2471 +3573,1409 @@ $ Country          &lt;chr&gt; "ESP", "GER", "AUT", "GER", "GER", "FRA", "GER", 
 <colgroup>
 <col style="width: 4%">
 <col style="width: 4%">
-<col style="width: 4%">
 <col style="width: 24%">
-<col style="width: 17%">
-<col style="width: 15%">
-<col style="width: 28%">
+<col style="width: 16%">
+<col style="width: 13%">
+<col style="width: 27%">
+<col style="width: 8%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: right;">X.1</th>
 <th style="text-align: right;">ID</th>
 <th style="text-align: right;">X</th>
 <th style="text-align: left;">NAMES</th>
 <th style="text-align: left;">TRAINING.DATE</th>
 <th style="text-align: left;">AREA</th>
 <th style="text-align: right;">PRACTICAL.EXAM.RESULTS</th>
+<th style="text-align: left;">RESULT</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;">NA</td>
 <td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: right;">NA</td>
+<td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">44</td>
-<td style="text-align: right;">44</td>
-<td style="text-align: right;">76</td>
-<td style="text-align: left;">Cafer&nbsp;Kır</td>
-<td style="text-align: left;">03-07-25</td>
-<td style="text-align: left;">Gebze&nbsp;8</td>
-<td style="text-align: right;">89.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">45</td>
-<td style="text-align: right;">45</td>
-<td style="text-align: right;">77</td>
-<td style="text-align: left;">Ayça&nbsp;Ünal</td>
-<td style="text-align: left;">03-07-25</td>
-<td style="text-align: left;">Gebze&nbsp;8</td>
-<td style="text-align: right;">89.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">46</td>
-<td style="text-align: right;">46</td>
-<td style="text-align: right;">78</td>
-<td style="text-align: left;">Zeliha&nbsp;Garip</td>
-<td style="text-align: left;">03-07-25</td>
-<td style="text-align: left;">Gebze&nbsp;8</td>
-<td style="text-align: right;">90.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">47</td>
-<td style="text-align: right;">47</td>
-<td style="text-align: right;">79</td>
-<td style="text-align: left;">Yasemin&nbsp;Güler</td>
-<td style="text-align: left;">03-07-25</td>
-<td style="text-align: left;">Gebze&nbsp;8</td>
-<td style="text-align: right;">79.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">48</td>
-<td style="text-align: right;">48</td>
-<td style="text-align: right;">80</td>
-<td style="text-align: left;">Muammer&nbsp;Gözcü</td>
-<td style="text-align: left;">03-07-25</td>
-<td style="text-align: left;">Gebze&nbsp;8</td>
-<td style="text-align: right;">93.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">49</td>
-<td style="text-align: right;">49</td>
-<td style="text-align: right;">81</td>
-<td style="text-align: left;">Mertkan&nbsp;Bulut</td>
-<td style="text-align: left;">03-07-25</td>
-<td style="text-align: left;">Gebze&nbsp;8</td>
-<td style="text-align: right;">87.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">50</td>
-<td style="text-align: right;">50</td>
-<td style="text-align: right;">82</td>
-<td style="text-align: left;">Ezgi&nbsp;Dilmen</td>
-<td style="text-align: left;">03-07-25</td>
-<td style="text-align: left;">Gebze&nbsp;8</td>
-<td style="text-align: right;">87.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">51</td>
-<td style="text-align: right;">51</td>
-<td style="text-align: right;">83</td>
-<td style="text-align: left;">Anıl&nbsp;Şahin</td>
-<td style="text-align: left;">03-07-25</td>
-<td style="text-align: left;">Gebze&nbsp;8</td>
-<td style="text-align: right;">90.50</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">52</td>
-<td style="text-align: right;">52</td>
-<td style="text-align: right;">84</td>
-<td style="text-align: left;">Deniz&nbsp;Kesekler</td>
-<td style="text-align: left;">03-07-25</td>
-<td style="text-align: left;">Gebze&nbsp;8</td>
-<td style="text-align: right;">93.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">53</td>
-<td style="text-align: right;">53</td>
-<td style="text-align: right;">85</td>
-<td style="text-align: left;">Emre&nbsp;Aydın</td>
-<td style="text-align: left;">03-07-25</td>
-<td style="text-align: left;">Gebze&nbsp;8</td>
-<td style="text-align: right;">84.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">54</td>
-<td style="text-align: right;">54</td>
-<td style="text-align: right;">86</td>
-<td style="text-align: left;">Ethem&nbsp;Yaman</td>
-<td style="text-align: left;">03-07-25</td>
-<td style="text-align: left;">Gebze&nbsp;8</td>
-<td style="text-align: right;">70.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">55</td>
-<td style="text-align: right;">55</td>
-<td style="text-align: right;">87</td>
-<td style="text-align: left;">Ferdi&nbsp;Demirci</td>
-<td style="text-align: left;">03-07-25</td>
-<td style="text-align: left;">Gebze&nbsp;8</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">56</td>
-<td style="text-align: right;">56</td>
-<td style="text-align: right;">88</td>
-<td style="text-align: left;">Ferdi&nbsp;Kılıç</td>
-<td style="text-align: left;">03-07-25</td>
-<td style="text-align: left;">Gebze&nbsp;8</td>
-<td style="text-align: right;">53.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">57</td>
-<td style="text-align: right;">57</td>
-<td style="text-align: right;">89</td>
-<td style="text-align: left;">Serhat&nbsp;Özdağ</td>
-<td style="text-align: left;">03-07-25</td>
-<td style="text-align: left;">Gebze&nbsp;8</td>
-<td style="text-align: right;">93.75</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">58</td>
-<td style="text-align: right;">58</td>
-<td style="text-align: right;">90</td>
-<td style="text-align: left;">İlker&nbsp;Tütüncü</td>
-<td style="text-align: left;">03-07-25</td>
-<td style="text-align: left;">Gebze&nbsp;8</td>
-<td style="text-align: right;">90.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">59</td>
-<td style="text-align: right;">59</td>
-<td style="text-align: right;">91</td>
-<td style="text-align: left;">Musa&nbsp;Kırık</td>
-<td style="text-align: left;">03-07-25</td>
-<td style="text-align: left;">Gebze&nbsp;8</td>
-<td style="text-align: right;">90.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">60</td>
-<td style="text-align: right;">60</td>
-<td style="text-align: right;">92</td>
-<td style="text-align: left;">Bayram&nbsp;Yıldız</td>
-<td style="text-align: left;">05-08-25</td>
-<td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">91.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">61</td>
-<td style="text-align: right;">61</td>
-<td style="text-align: right;">93</td>
-<td style="text-align: left;">Ali&nbsp;Göze</td>
-<td style="text-align: left;">05-08-25</td>
-<td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">99.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">62</td>
-<td style="text-align: right;">62</td>
-<td style="text-align: right;">94</td>
-<td style="text-align: left;">Seçil&nbsp;Topraklı</td>
-<td style="text-align: left;">05-08-25</td>
-<td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">96.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">63</td>
-<td style="text-align: right;">63</td>
-<td style="text-align: right;">95</td>
-<td style="text-align: left;">Fatma&nbsp;Nur&nbsp;Kurtuluş</td>
-<td style="text-align: left;">05-08-25</td>
-<td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">78.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">64</td>
-<td style="text-align: right;">64</td>
-<td style="text-align: right;">96</td>
-<td style="text-align: left;">Gülten&nbsp;Türkel</td>
-<td style="text-align: left;">05-08-25</td>
-<td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">88.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">65</td>
-<td style="text-align: right;">65</td>
-<td style="text-align: right;">97</td>
-<td style="text-align: left;">Cemal&nbsp;Kaşdemir</td>
-<td style="text-align: left;">05-08-25</td>
-<td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">92.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">66</td>
-<td style="text-align: right;">66</td>
-<td style="text-align: right;">98</td>
-<td style="text-align: left;">Ferhat&nbsp;Bayır</td>
-<td style="text-align: left;">05-08-25</td>
-<td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">67</td>
-<td style="text-align: right;">67</td>
-<td style="text-align: right;">101</td>
-<td style="text-align: left;">Berati&nbsp;Oğuz</td>
-<td style="text-align: left;">19-08-25</td>
-<td style="text-align: left;">Çerkezköy</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">68</td>
-<td style="text-align: right;">68</td>
-<td style="text-align: right;">102</td>
-<td style="text-align: left;">Mustafa&nbsp;Ünal</td>
-<td style="text-align: left;">19-08-25</td>
-<td style="text-align: left;">Çerkezköy</td>
-<td style="text-align: right;">97.50</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">69</td>
-<td style="text-align: right;">69</td>
-<td style="text-align: right;">103</td>
-<td style="text-align: left;">Çağatay&nbsp;Çiçek</td>
-<td style="text-align: left;">19-08-25</td>
-<td style="text-align: left;">Çerkezköy</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">70</td>
-<td style="text-align: right;">70</td>
-<td style="text-align: right;">104</td>
-<td style="text-align: left;">İlayda&nbsp;Kefeli</td>
-<td style="text-align: left;">19-08-25</td>
-<td style="text-align: left;">Çerkezköy</td>
-<td style="text-align: right;">84.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">71</td>
-<td style="text-align: right;">71</td>
-<td style="text-align: right;">105</td>
-<td style="text-align: left;">Emre&nbsp;Barış&nbsp;Akgül</td>
-<td style="text-align: left;">19-08-25</td>
-<td style="text-align: left;">Çerkezköy</td>
-<td style="text-align: right;">99.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">72</td>
-<td style="text-align: right;">72</td>
-<td style="text-align: right;">106</td>
-<td style="text-align: left;">Karsu&nbsp;Yetkin</td>
-<td style="text-align: left;">25-08-25</td>
-<td style="text-align: left;">Çerkezköy</td>
-<td style="text-align: right;">90.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">73</td>
-<td style="text-align: right;">73</td>
-<td style="text-align: right;">107</td>
-<td style="text-align: left;">Nurten&nbsp;Başdağ</td>
-<td style="text-align: left;">25-08-25</td>
-<td style="text-align: left;">Çerkezköy</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">74</td>
-<td style="text-align: right;">74</td>
-<td style="text-align: right;">108</td>
-<td style="text-align: left;">Şengül&nbsp;Yüksel</td>
-<td style="text-align: left;">25-08-25</td>
-<td style="text-align: left;">Çerkezköy</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">75</td>
-<td style="text-align: right;">75</td>
-<td style="text-align: right;">109</td>
-<td style="text-align: left;">Mehmet&nbsp;Erdem</td>
-<td style="text-align: left;">25-08-25</td>
-<td style="text-align: left;">Çerkezköy</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">76</td>
-<td style="text-align: right;">76</td>
-<td style="text-align: right;">110</td>
-<td style="text-align: left;">Taşkın&nbsp;Kılıç</td>
-<td style="text-align: left;">25-08-25</td>
-<td style="text-align: left;">Çerkezköy</td>
-<td style="text-align: right;">82.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">77</td>
-<td style="text-align: right;">77</td>
-<td style="text-align: right;">111</td>
-<td style="text-align: left;">Yaşar&nbsp;Aytop</td>
-<td style="text-align: left;">25-08-25</td>
-<td style="text-align: left;">Çerkezköy</td>
-<td style="text-align: right;">98.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">78</td>
-<td style="text-align: right;">78</td>
-<td style="text-align: right;">112</td>
-<td style="text-align: left;">Zeynep&nbsp;İnce</td>
-<td style="text-align: left;">25-08-25</td>
-<td style="text-align: left;">Çerkezköy</td>
-<td style="text-align: right;">79.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">79</td>
-<td style="text-align: right;">79</td>
-<td style="text-align: right;">113</td>
-<td style="text-align: left;">Oğuz&nbsp;Kaya</td>
-<td style="text-align: left;">25-08-25</td>
-<td style="text-align: left;">Çerkezköy</td>
-<td style="text-align: right;">94.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">80</td>
-<td style="text-align: right;">80</td>
-<td style="text-align: right;">114</td>
-<td style="text-align: left;">Ünsal&nbsp;Yıldırım</td>
-<td style="text-align: left;">01-09-25</td>
-<td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">97.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">81</td>
-<td style="text-align: right;">81</td>
-<td style="text-align: right;">115</td>
-<td style="text-align: left;">Özgür&nbsp;Alakuş</td>
-<td style="text-align: left;">01-09-25</td>
-<td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">82.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">82</td>
-<td style="text-align: right;">82</td>
-<td style="text-align: right;">116</td>
-<td style="text-align: left;">Burak&nbsp;Turgut</td>
-<td style="text-align: left;">01-09-25</td>
-<td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">79.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">83</td>
-<td style="text-align: right;">83</td>
-<td style="text-align: right;">117</td>
-<td style="text-align: left;">Muhammet&nbsp;Aygün</td>
-<td style="text-align: left;">01-09-25</td>
-<td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">84</td>
-<td style="text-align: right;">84</td>
-<td style="text-align: right;">118</td>
-<td style="text-align: left;">Özkan&nbsp;Kılıç</td>
-<td style="text-align: left;">01-09-25</td>
-<td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">99.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">85</td>
-<td style="text-align: right;">85</td>
-<td style="text-align: right;">119</td>
-<td style="text-align: left;">Kenan&nbsp;Akkiliç</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">95.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">86</td>
-<td style="text-align: right;">86</td>
-<td style="text-align: right;">120</td>
-<td style="text-align: left;">Kadi̇r&nbsp;Yücetürk</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">99.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">87</td>
-<td style="text-align: right;">87</td>
-<td style="text-align: right;">121</td>
-<td style="text-align: left;">Muharrem&nbsp;Bozteke</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">94.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">88</td>
-<td style="text-align: right;">88</td>
-<td style="text-align: right;">122</td>
-<td style="text-align: left;">Ertuğrul&nbsp;Ati̇k</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">98.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">89</td>
-<td style="text-align: right;">89</td>
-<td style="text-align: right;">123</td>
-<td style="text-align: left;">Namik&nbsp;Kemak&nbsp;Yayla</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">93.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">90</td>
-<td style="text-align: right;">90</td>
-<td style="text-align: right;">124</td>
-<td style="text-align: left;">Firat&nbsp;Aktaş</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">91</td>
-<td style="text-align: right;">91</td>
-<td style="text-align: right;">125</td>
-<td style="text-align: left;">Burak&nbsp;Erken</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">92</td>
-<td style="text-align: right;">92</td>
-<td style="text-align: right;">126</td>
-<td style="text-align: left;">Burak&nbsp;Yurttaş</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">99.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">93</td>
-<td style="text-align: right;">93</td>
-<td style="text-align: right;">127</td>
-<td style="text-align: left;">Burak&nbsp;Aydin</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">99.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">94</td>
-<td style="text-align: right;">94</td>
-<td style="text-align: right;">128</td>
-<td style="text-align: left;">Sercan&nbsp;İnce</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">97.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">95</td>
-<td style="text-align: right;">95</td>
-<td style="text-align: right;">129</td>
-<td style="text-align: left;">Erhan&nbsp;Demi̇r</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">96</td>
-<td style="text-align: right;">96</td>
-<td style="text-align: right;">130</td>
-<td style="text-align: left;">Ali̇&nbsp;Firat&nbsp;Alkan</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">97</td>
-<td style="text-align: right;">97</td>
-<td style="text-align: right;">131</td>
-<td style="text-align: left;">Ayteki̇n&nbsp;Köse</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">98</td>
-<td style="text-align: right;">98</td>
-<td style="text-align: right;">132</td>
-<td style="text-align: left;">Taner&nbsp;Dede</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">93.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">99</td>
-<td style="text-align: right;">99</td>
-<td style="text-align: right;">133</td>
-<td style="text-align: left;">Serkan&nbsp;Hali̇s</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">100</td>
-<td style="text-align: right;">100</td>
-<td style="text-align: right;">134</td>
-<td style="text-align: left;">Doğukan&nbsp;Karakuş</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">101</td>
-<td style="text-align: right;">101</td>
-<td style="text-align: right;">135</td>
-<td style="text-align: left;">Murat&nbsp;Yalçin</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">102</td>
-<td style="text-align: right;">102</td>
-<td style="text-align: right;">136</td>
-<td style="text-align: left;">Harun&nbsp;Ersoy</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">103</td>
-<td style="text-align: right;">103</td>
-<td style="text-align: right;">137</td>
-<td style="text-align: left;">Hakan&nbsp;Arpaci</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">97.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">104</td>
-<td style="text-align: right;">104</td>
-<td style="text-align: right;">138</td>
-<td style="text-align: left;">Emre&nbsp;Kir</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">94.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">105</td>
-<td style="text-align: right;">105</td>
-<td style="text-align: right;">139</td>
-<td style="text-align: left;">Orhan&nbsp;Dağ</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">90.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">106</td>
-<td style="text-align: right;">106</td>
-<td style="text-align: right;">140</td>
-<td style="text-align: left;">Şi̇nasi̇&nbsp;Beler</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">107</td>
-<td style="text-align: right;">107</td>
-<td style="text-align: right;">141</td>
-<td style="text-align: left;">Ferhat&nbsp;Özhan</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">108</td>
-<td style="text-align: right;">108</td>
-<td style="text-align: right;">142</td>
-<td style="text-align: left;">İlker&nbsp;Di̇ngi̇l</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">97.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">109</td>
-<td style="text-align: right;">109</td>
-<td style="text-align: right;">143</td>
-<td style="text-align: left;">Osman&nbsp;Dokumaci</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">97.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">110</td>
-<td style="text-align: right;">110</td>
-<td style="text-align: right;">144</td>
-<td style="text-align: left;">Kenan&nbsp;Bi̇lli̇k</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">94.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">111</td>
-<td style="text-align: right;">111</td>
-<td style="text-align: right;">145</td>
-<td style="text-align: left;">Özal&nbsp;Kaya</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">94.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">112</td>
-<td style="text-align: right;">112</td>
-<td style="text-align: right;">146</td>
-<td style="text-align: left;">Berkan&nbsp;Sali̇r</td>
-<td style="text-align: left;">05-09-25</td>
-<td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">98.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">113</td>
 <td style="text-align: right;">113</td>
 <td style="text-align: right;">147</td>
 <td style="text-align: left;">Cem&nbsp;Sürer</td>
 <td style="text-align: left;">05-09-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">114</td>
+<tr class="odd">
 <td style="text-align: right;">114</td>
 <td style="text-align: right;">148</td>
 <td style="text-align: left;">Ömer&nbsp;Faruk&nbsp;Bi̇lge</td>
 <td style="text-align: left;">05-09-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">96.00</td>
+<td style="text-align: right;">96.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">115</td>
+<tr class="even">
 <td style="text-align: right;">115</td>
 <td style="text-align: right;">149</td>
 <td style="text-align: left;">Sedat&nbsp;Lafçi</td>
 <td style="text-align: left;">05-09-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">116</td>
+<tr class="odd">
 <td style="text-align: right;">116</td>
 <td style="text-align: right;">150</td>
 <td style="text-align: left;">Emi̇rcan&nbsp;Di̇nç</td>
 <td style="text-align: left;">05-09-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">117</td>
+<tr class="even">
 <td style="text-align: right;">117</td>
 <td style="text-align: right;">151</td>
 <td style="text-align: left;">Gülçehri̇&nbsp;Yildirim</td>
 <td style="text-align: left;">26-09-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">91.00</td>
+<td style="text-align: right;">91.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">118</td>
+<tr class="odd">
 <td style="text-align: right;">118</td>
 <td style="text-align: right;">152</td>
 <td style="text-align: left;">Ramazan&nbsp;Denktaş</td>
 <td style="text-align: left;">26-09-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">98.00</td>
+<td style="text-align: right;">98.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">119</td>
+<tr class="even">
 <td style="text-align: right;">119</td>
 <td style="text-align: right;">153</td>
 <td style="text-align: left;">Murat&nbsp;Yalçin</td>
 <td style="text-align: left;">26-09-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">120</td>
+<tr class="odd">
 <td style="text-align: right;">120</td>
 <td style="text-align: right;">154</td>
 <td style="text-align: left;">Serdar&nbsp;Doğan</td>
 <td style="text-align: left;">26-09-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">121</td>
+<tr class="even">
 <td style="text-align: right;">121</td>
 <td style="text-align: right;">155</td>
 <td style="text-align: left;">Ender&nbsp;Yilmaz</td>
 <td style="text-align: left;">26-09-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">122</td>
+<tr class="odd">
 <td style="text-align: right;">122</td>
 <td style="text-align: right;">156</td>
 <td style="text-align: left;">Emre&nbsp;Kara</td>
 <td style="text-align: left;">26-09-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">96.00</td>
+<td style="text-align: right;">96.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">123</td>
+<tr class="even">
 <td style="text-align: right;">123</td>
 <td style="text-align: right;">157</td>
 <td style="text-align: left;">Mesut&nbsp;Atayildiz</td>
 <td style="text-align: left;">26-09-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">97.00</td>
+<td style="text-align: right;">97.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">124</td>
+<tr class="odd">
 <td style="text-align: right;">124</td>
 <td style="text-align: right;">158</td>
 <td style="text-align: left;">Sabri̇&nbsp;Çağan</td>
 <td style="text-align: left;">02-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">94.00</td>
+<td style="text-align: right;">94.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">125</td>
+<tr class="even">
 <td style="text-align: right;">125</td>
 <td style="text-align: right;">159</td>
 <td style="text-align: left;">Gökhan&nbsp;Gürel</td>
 <td style="text-align: left;">02-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">126</td>
+<tr class="odd">
 <td style="text-align: right;">126</td>
 <td style="text-align: right;">160</td>
 <td style="text-align: left;">Sezgi̇n&nbsp;Kümbül</td>
 <td style="text-align: left;">02-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">127</td>
+<tr class="even">
 <td style="text-align: right;">127</td>
 <td style="text-align: right;">162</td>
 <td style="text-align: left;">Nesi̇be&nbsp;Vatansever</td>
 <td style="text-align: left;">02-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">128</td>
+<tr class="odd">
 <td style="text-align: right;">128</td>
 <td style="text-align: right;">163</td>
 <td style="text-align: left;">Nurşen&nbsp;Kanik</td>
 <td style="text-align: left;">02-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">98.00</td>
+<td style="text-align: right;">98.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">129</td>
+<tr class="even">
 <td style="text-align: right;">129</td>
 <td style="text-align: right;">164</td>
 <td style="text-align: left;">Huri̇&nbsp;Aydemi̇r</td>
 <td style="text-align: left;">02-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">95.00</td>
+<td style="text-align: right;">95.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">130</td>
+<tr class="odd">
 <td style="text-align: right;">130</td>
 <td style="text-align: right;">165</td>
 <td style="text-align: left;">Fuat&nbsp;Söğüt</td>
 <td style="text-align: left;">02-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">97.50</td>
+<td style="text-align: right;">97.5</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">131</td>
+<tr class="even">
 <td style="text-align: right;">131</td>
 <td style="text-align: right;">166</td>
 <td style="text-align: left;">Nai̇l&nbsp;Erbek</td>
 <td style="text-align: left;">02-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">132</td>
+<tr class="odd">
 <td style="text-align: right;">132</td>
 <td style="text-align: right;">167</td>
 <td style="text-align: left;">Görkem&nbsp;Batur</td>
 <td style="text-align: left;">02-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">133</td>
+<tr class="even">
 <td style="text-align: right;">133</td>
 <td style="text-align: right;">168</td>
 <td style="text-align: left;">Mehmet&nbsp;Taşdemi̇r</td>
 <td style="text-align: left;">02-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">97.00</td>
+<td style="text-align: right;">97.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">134</td>
+<tr class="odd">
 <td style="text-align: right;">134</td>
 <td style="text-align: right;">169</td>
 <td style="text-align: left;">Kudret&nbsp;Karadağ</td>
 <td style="text-align: left;">02-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">135</td>
+<tr class="even">
 <td style="text-align: right;">135</td>
 <td style="text-align: right;">170</td>
 <td style="text-align: left;">Neri̇man&nbsp;Sevgi̇li̇</td>
 <td style="text-align: left;">02-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">92.00</td>
+<td style="text-align: right;">92.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">136</td>
+<tr class="odd">
 <td style="text-align: right;">136</td>
 <td style="text-align: right;">171</td>
 <td style="text-align: left;">Cevahi̇r&nbsp;Yildirim</td>
 <td style="text-align: left;">02-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">94.00</td>
+<td style="text-align: right;">94.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">137</td>
+<tr class="even">
 <td style="text-align: right;">137</td>
 <td style="text-align: right;">172</td>
 <td style="text-align: left;">Ümi̇t&nbsp;Akpinar</td>
 <td style="text-align: left;">02-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">98.00</td>
+<td style="text-align: right;">98.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">138</td>
+<tr class="odd">
 <td style="text-align: right;">138</td>
 <td style="text-align: right;">173</td>
 <td style="text-align: left;">Adem&nbsp;Ci̇hat</td>
 <td style="text-align: left;">02-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">139</td>
+<tr class="even">
 <td style="text-align: right;">139</td>
 <td style="text-align: right;">174</td>
 <td style="text-align: left;">Yunus&nbsp;Emre&nbsp;Biçakli</td>
 <td style="text-align: left;">02-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">96.00</td>
+<td style="text-align: right;">96.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">140</td>
+<tr class="odd">
 <td style="text-align: right;">140</td>
 <td style="text-align: right;">175</td>
 <td style="text-align: left;">Burak&nbsp;Aşçigi̇l</td>
 <td style="text-align: left;">02-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">92.00</td>
+<td style="text-align: right;">92.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">141</td>
+<tr class="even">
 <td style="text-align: right;">141</td>
 <td style="text-align: right;">176</td>
 <td style="text-align: left;">Gülşen&nbsp;Bi̇rli̇</td>
 <td style="text-align: left;">02-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">89.00</td>
+<td style="text-align: right;">89.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">142</td>
+<tr class="odd">
 <td style="text-align: right;">142</td>
 <td style="text-align: right;">177</td>
 <td style="text-align: left;">Ercan&nbsp;Sucuk</td>
 <td style="text-align: left;">03-10-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">95.00</td>
+<td style="text-align: right;">95.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">143</td>
+<tr class="even">
 <td style="text-align: right;">143</td>
 <td style="text-align: right;">178</td>
 <td style="text-align: left;">Serkan&nbsp;Emen</td>
 <td style="text-align: left;">03-10-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">97.00</td>
+<td style="text-align: right;">97.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">144</td>
+<tr class="odd">
 <td style="text-align: right;">144</td>
 <td style="text-align: right;">179</td>
 <td style="text-align: left;">Yunus&nbsp;Kiliç</td>
 <td style="text-align: left;">03-10-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">145</td>
+<tr class="even">
 <td style="text-align: right;">145</td>
 <td style="text-align: right;">180</td>
 <td style="text-align: left;">Mustafa&nbsp;Özden</td>
 <td style="text-align: left;">03-10-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">96.00</td>
+<td style="text-align: right;">96.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">146</td>
+<tr class="odd">
 <td style="text-align: right;">146</td>
 <td style="text-align: right;">181</td>
 <td style="text-align: left;">Güray&nbsp;Şentürk</td>
 <td style="text-align: left;">03-10-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">95.00</td>
+<td style="text-align: right;">95.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">147</td>
+<tr class="even">
 <td style="text-align: right;">147</td>
 <td style="text-align: right;">182</td>
 <td style="text-align: left;">Kadi̇r&nbsp;Çeti̇n</td>
 <td style="text-align: left;">03-10-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">148</td>
+<tr class="odd">
 <td style="text-align: right;">148</td>
 <td style="text-align: right;">183</td>
 <td style="text-align: left;">Adem&nbsp;Kizilkaya</td>
 <td style="text-align: left;">03-10-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">89.00</td>
+<td style="text-align: right;">89.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">149</td>
+<tr class="even">
 <td style="text-align: right;">149</td>
 <td style="text-align: right;">184</td>
 <td style="text-align: left;">Ferhat&nbsp;Aykir</td>
 <td style="text-align: left;">03-10-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">90.00</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">150</td>
+<tr class="odd">
 <td style="text-align: right;">150</td>
 <td style="text-align: right;">185</td>
 <td style="text-align: left;">Serhat&nbsp;Karakurt</td>
 <td style="text-align: left;">03-10-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">96.00</td>
+<td style="text-align: right;">96.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">151</td>
+<tr class="even">
 <td style="text-align: right;">151</td>
 <td style="text-align: right;">186</td>
 <td style="text-align: left;">Özkan&nbsp;Bozkurt</td>
 <td style="text-align: left;">03-10-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">95.00</td>
+<td style="text-align: right;">95.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">152</td>
+<tr class="odd">
 <td style="text-align: right;">152</td>
 <td style="text-align: right;">187</td>
 <td style="text-align: left;">Abdullah&nbsp;Önlü</td>
 <td style="text-align: left;">03-10-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">96.00</td>
+<td style="text-align: right;">96.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">153</td>
+<tr class="even">
 <td style="text-align: right;">153</td>
 <td style="text-align: right;">188</td>
 <td style="text-align: left;">Deni̇z&nbsp;Akkoş</td>
 <td style="text-align: left;">03-10-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">98.00</td>
+<td style="text-align: right;">98.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">154</td>
+<tr class="odd">
 <td style="text-align: right;">154</td>
 <td style="text-align: right;">189</td>
 <td style="text-align: left;">Beytullah&nbsp;Çakmak</td>
 <td style="text-align: left;">03-10-25</td>
 <td style="text-align: left;">Akçaburgaz</td>
-<td style="text-align: right;">81.00</td>
+<td style="text-align: right;">81.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">155</td>
+<tr class="even">
 <td style="text-align: right;">155</td>
 <td style="text-align: right;">190</td>
 <td style="text-align: left;">Eren&nbsp;Yavaşci</td>
 <td style="text-align: left;">08-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">98.00</td>
+<td style="text-align: right;">98.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">156</td>
+<tr class="odd">
 <td style="text-align: right;">156</td>
 <td style="text-align: right;">191</td>
 <td style="text-align: left;">Aykut&nbsp;Çalişkan</td>
 <td style="text-align: left;">08-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">97.00</td>
+<td style="text-align: right;">97.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">157</td>
+<tr class="even">
 <td style="text-align: right;">157</td>
 <td style="text-align: right;">192</td>
 <td style="text-align: left;">Emi̇rhan&nbsp;Çarki</td>
 <td style="text-align: left;">08-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">98.00</td>
+<td style="text-align: right;">98.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">158</td>
+<tr class="odd">
 <td style="text-align: right;">158</td>
 <td style="text-align: right;">193</td>
 <td style="text-align: left;">Gülbahar&nbsp;Ateş</td>
 <td style="text-align: left;">08-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">77.00</td>
+<td style="text-align: right;">77.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">159</td>
+<tr class="even">
 <td style="text-align: right;">159</td>
 <td style="text-align: right;">194</td>
 <td style="text-align: left;">Şule&nbsp;Arslan</td>
 <td style="text-align: left;">08-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">96.00</td>
+<td style="text-align: right;">96.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">160</td>
+<tr class="odd">
 <td style="text-align: right;">160</td>
 <td style="text-align: right;">195</td>
 <td style="text-align: left;">Mevlüt&nbsp;Yavuz</td>
 <td style="text-align: left;">08-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">161</td>
+<tr class="even">
 <td style="text-align: right;">161</td>
 <td style="text-align: right;">196</td>
 <td style="text-align: left;">Oktay&nbsp;Savaş</td>
 <td style="text-align: left;">08-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">98.00</td>
+<td style="text-align: right;">98.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">162</td>
+<tr class="odd">
 <td style="text-align: right;">162</td>
 <td style="text-align: right;">197</td>
 <td style="text-align: left;">Alperen&nbsp;Korkmaz</td>
 <td style="text-align: left;">08-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">163</td>
+<tr class="even">
 <td style="text-align: right;">163</td>
 <td style="text-align: right;">198</td>
 <td style="text-align: left;">Yusuf&nbsp;Yalçin</td>
 <td style="text-align: left;">08-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">97.00</td>
+<td style="text-align: right;">97.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">164</td>
+<tr class="odd">
 <td style="text-align: right;">164</td>
 <td style="text-align: right;">199</td>
 <td style="text-align: left;">Harun&nbsp;Er&nbsp;</td>
 <td style="text-align: left;">08-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">96.00</td>
+<td style="text-align: right;">96.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">165</td>
+<tr class="even">
 <td style="text-align: right;">165</td>
 <td style="text-align: right;">200</td>
 <td style="text-align: left;">Umut&nbsp;Güzel</td>
 <td style="text-align: left;">08-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">166</td>
+<tr class="odd">
 <td style="text-align: right;">166</td>
 <td style="text-align: right;">201</td>
 <td style="text-align: left;">Ertuğrul&nbsp;Doğan</td>
 <td style="text-align: left;">08-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">89.00</td>
+<td style="text-align: right;">89.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">167</td>
+<tr class="even">
 <td style="text-align: right;">167</td>
 <td style="text-align: right;">202</td>
 <td style="text-align: left;">Ahmet&nbsp;Deni̇z</td>
 <td style="text-align: left;">08-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">168</td>
+<tr class="odd">
 <td style="text-align: right;">168</td>
 <td style="text-align: right;">203</td>
 <td style="text-align: left;">Aynur&nbsp;Güler&nbsp;</td>
 <td style="text-align: left;">08-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">83.00</td>
+<td style="text-align: right;">83.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">169</td>
+<tr class="even">
 <td style="text-align: right;">169</td>
 <td style="text-align: right;">204</td>
 <td style="text-align: left;">Feyyaz&nbsp;Şeker</td>
 <td style="text-align: left;">08-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">98.00</td>
+<td style="text-align: right;">98.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">170</td>
+<tr class="odd">
 <td style="text-align: right;">170</td>
 <td style="text-align: right;">205</td>
 <td style="text-align: left;">Feri̇t&nbsp;Özeki̇nci̇</td>
 <td style="text-align: left;">08-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">98.00</td>
+<td style="text-align: right;">98.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">171</td>
+<tr class="even">
 <td style="text-align: right;">171</td>
 <td style="text-align: right;">206</td>
 <td style="text-align: left;">Zafer&nbsp;Başkaya</td>
 <td style="text-align: left;">08-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">94.00</td>
+<td style="text-align: right;">94.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">172</td>
+<tr class="odd">
 <td style="text-align: right;">172</td>
 <td style="text-align: right;">207</td>
 <td style="text-align: left;">Siraç&nbsp;Hasar&nbsp;</td>
 <td style="text-align: left;">08-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">173</td>
+<tr class="even">
 <td style="text-align: right;">173</td>
 <td style="text-align: right;">208</td>
 <td style="text-align: left;">Caner&nbsp;Aydoğdu</td>
 <td style="text-align: left;">08-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">88.00</td>
+<td style="text-align: right;">88.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">174</td>
+<tr class="odd">
 <td style="text-align: right;">174</td>
 <td style="text-align: right;">209</td>
 <td style="text-align: left;">Erdal&nbsp;Terhan</td>
 <td style="text-align: left;">08-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">93.00</td>
+<td style="text-align: right;">93.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">175</td>
+<tr class="even">
 <td style="text-align: right;">175</td>
 <td style="text-align: right;">210</td>
 <td style="text-align: left;">Nesli̇han&nbsp;Yildirim</td>
 <td style="text-align: left;">08-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">92.00</td>
+<td style="text-align: right;">92.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">176</td>
+<tr class="odd">
 <td style="text-align: right;">176</td>
 <td style="text-align: right;">212</td>
 <td style="text-align: left;">Onur&nbsp;Şahi̇n</td>
 <td style="text-align: left;">08-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;2</td>
-<td style="text-align: right;">98.00</td>
+<td style="text-align: right;">98.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">177</td>
+<tr class="even">
 <td style="text-align: right;">177</td>
 <td style="text-align: right;">213</td>
 <td style="text-align: left;">Öztürk&nbsp;Çapkin</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">97.50</td>
+<td style="text-align: right;">97.5</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">178</td>
+<tr class="odd">
 <td style="text-align: right;">178</td>
 <td style="text-align: right;">214</td>
 <td style="text-align: left;">Tayfun&nbsp;Kaya</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">96.00</td>
+<td style="text-align: right;">96.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">179</td>
+<tr class="even">
 <td style="text-align: right;">179</td>
 <td style="text-align: right;">215</td>
 <td style="text-align: left;">Levent&nbsp;Çakar</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">180</td>
+<tr class="odd">
 <td style="text-align: right;">180</td>
 <td style="text-align: right;">216</td>
 <td style="text-align: left;">Cüneyt&nbsp;Altunoğlu</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">181</td>
+<tr class="even">
 <td style="text-align: right;">181</td>
 <td style="text-align: right;">217</td>
 <td style="text-align: left;">Aydoğan&nbsp;Avcilar</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">182</td>
+<tr class="odd">
 <td style="text-align: right;">182</td>
 <td style="text-align: right;">218</td>
 <td style="text-align: left;">Onur&nbsp;Munzur</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">95.50</td>
+<td style="text-align: right;">95.5</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">183</td>
+<tr class="even">
 <td style="text-align: right;">183</td>
 <td style="text-align: right;">219</td>
 <td style="text-align: left;">Uğur&nbsp;Aslan</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">184</td>
+<tr class="odd">
 <td style="text-align: right;">184</td>
 <td style="text-align: right;">220</td>
 <td style="text-align: left;">Muhammet&nbsp;Vatandaş</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">98.00</td>
+<td style="text-align: right;">98.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">185</td>
+<tr class="even">
 <td style="text-align: right;">185</td>
 <td style="text-align: right;">221</td>
 <td style="text-align: left;">Erdal&nbsp;Uluşik</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">87.00</td>
+<td style="text-align: right;">87.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">186</td>
+<tr class="odd">
 <td style="text-align: right;">186</td>
 <td style="text-align: right;">222</td>
 <td style="text-align: left;">Abdurrahman&nbsp;Yildiz</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">187</td>
+<tr class="even">
 <td style="text-align: right;">187</td>
 <td style="text-align: right;">223</td>
 <td style="text-align: left;">Cuma&nbsp;Tenli̇</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">188</td>
+<tr class="odd">
 <td style="text-align: right;">188</td>
 <td style="text-align: right;">224</td>
 <td style="text-align: left;">Eyüp&nbsp;Beyaz</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">97.00</td>
+<td style="text-align: right;">97.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">189</td>
+<tr class="even">
 <td style="text-align: right;">189</td>
 <td style="text-align: right;">225</td>
 <td style="text-align: left;">Muhammet&nbsp;Adim</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">90.00</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">190</td>
+<tr class="odd">
 <td style="text-align: right;">190</td>
 <td style="text-align: right;">226</td>
 <td style="text-align: left;">Cumhur&nbsp;Horasanli</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">191</td>
+<tr class="even">
 <td style="text-align: right;">191</td>
 <td style="text-align: right;">227</td>
 <td style="text-align: left;">Harun&nbsp;Akin</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">90.00</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">192</td>
+<tr class="odd">
 <td style="text-align: right;">192</td>
 <td style="text-align: right;">228</td>
 <td style="text-align: left;">Uğur&nbsp;Abi̇</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">193</td>
+<tr class="even">
 <td style="text-align: right;">193</td>
 <td style="text-align: right;">229</td>
 <td style="text-align: left;">Emre&nbsp;Şabudak</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">194</td>
+<tr class="odd">
 <td style="text-align: right;">194</td>
 <td style="text-align: right;">230</td>
 <td style="text-align: left;">Emrah&nbsp;Erdoğan</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">93.00</td>
+<td style="text-align: right;">93.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">195</td>
+<tr class="even">
 <td style="text-align: right;">195</td>
 <td style="text-align: right;">231</td>
 <td style="text-align: left;">Fazil&nbsp;Başaru</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">196</td>
+<tr class="odd">
 <td style="text-align: right;">196</td>
 <td style="text-align: right;">232</td>
 <td style="text-align: left;">Yunus&nbsp;Deni̇z</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">93.00</td>
+<td style="text-align: right;">93.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">197</td>
+<tr class="even">
 <td style="text-align: right;">197</td>
 <td style="text-align: right;">233</td>
 <td style="text-align: left;">Ogün&nbsp;&nbsp;Türkmen</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">93.00</td>
+<td style="text-align: right;">93.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">198</td>
+<tr class="odd">
 <td style="text-align: right;">198</td>
 <td style="text-align: right;">234</td>
 <td style="text-align: left;">Zübeyi̇r&nbsp;Erdoğan</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">96.00</td>
+<td style="text-align: right;">96.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">199</td>
+<tr class="even">
 <td style="text-align: right;">199</td>
 <td style="text-align: right;">235</td>
 <td style="text-align: left;">E.&nbsp;Sungurteki̇n</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">200</td>
+<tr class="odd">
 <td style="text-align: right;">200</td>
 <td style="text-align: right;">236</td>
 <td style="text-align: left;">Emi̇rcan&nbsp;Tezel</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">201</td>
+<tr class="even">
 <td style="text-align: right;">201</td>
 <td style="text-align: right;">237</td>
 <td style="text-align: left;">Tahi̇r&nbsp;Umut</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">97.00</td>
+<td style="text-align: right;">97.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">202</td>
+<tr class="odd">
 <td style="text-align: right;">202</td>
 <td style="text-align: right;">238</td>
 <td style="text-align: left;">Sedayi̇&nbsp;Bi̇lgi̇n</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">94.00</td>
+<td style="text-align: right;">94.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">203</td>
+<tr class="even">
 <td style="text-align: right;">203</td>
 <td style="text-align: right;">239</td>
 <td style="text-align: left;">Yahya&nbsp;Gürbüz</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">84.00</td>
+<td style="text-align: right;">84.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">204</td>
+<tr class="odd">
 <td style="text-align: right;">204</td>
 <td style="text-align: right;">240</td>
 <td style="text-align: left;">Cüneyt&nbsp;Altun&nbsp;</td>
 <td style="text-align: left;">17-10-25</td>
 <td style="text-align: left;">Avrupa&nbsp;3</td>
-<td style="text-align: right;">98.00</td>
+<td style="text-align: right;">98.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">205</td>
+<tr class="even">
 <td style="text-align: right;">205</td>
 <td style="text-align: right;">242</td>
 <td style="text-align: left;">Emi̇ne&nbsp;Vayni̇</td>
 <td style="text-align: left;">27-10-25</td>
 <td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">83.00</td>
+<td style="text-align: right;">83.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">206</td>
+<tr class="odd">
 <td style="text-align: right;">206</td>
 <td style="text-align: right;">243</td>
 <td style="text-align: left;">Serdar&nbsp;Polat</td>
 <td style="text-align: left;">27-10-25</td>
 <td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">76.00</td>
+<td style="text-align: right;">76.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">207</td>
+<tr class="even">
 <td style="text-align: right;">207</td>
 <td style="text-align: right;">244</td>
 <td style="text-align: left;">Kadi̇r&nbsp;Tanriverdi̇</td>
 <td style="text-align: left;">27-10-25</td>
 <td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">94.00</td>
+<td style="text-align: right;">94.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">208</td>
+<tr class="odd">
 <td style="text-align: right;">208</td>
 <td style="text-align: right;">245</td>
 <td style="text-align: left;">Erkan&nbsp;Olgun</td>
 <td style="text-align: left;">27-10-25</td>
 <td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">90.00</td>
+<td style="text-align: right;">90.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">209</td>
+<tr class="even">
 <td style="text-align: right;">209</td>
 <td style="text-align: right;">248</td>
 <td style="text-align: left;">Meti̇n&nbsp;Yanar</td>
 <td style="text-align: left;">27-10-25</td>
 <td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">96.00</td>
+<td style="text-align: right;">96.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">210</td>
+<tr class="odd">
 <td style="text-align: right;">210</td>
 <td style="text-align: right;">249</td>
 <td style="text-align: left;">Hasan&nbsp;Ekmekci̇oğlu</td>
 <td style="text-align: left;">27-10-25</td>
 <td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">211</td>
+<tr class="even">
 <td style="text-align: right;">211</td>
 <td style="text-align: right;">250</td>
 <td style="text-align: left;">Ali̇&nbsp;Haydar&nbsp;Kara</td>
 <td style="text-align: left;">27-10-25</td>
 <td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">82.00</td>
+<td style="text-align: right;">82.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">212</td>
+<tr class="odd">
 <td style="text-align: right;">212</td>
 <td style="text-align: right;">251</td>
 <td style="text-align: left;">Ulaş&nbsp;Bi̇lgi̇n</td>
 <td style="text-align: left;">27-10-25</td>
 <td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">89.00</td>
+<td style="text-align: right;">89.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">213</td>
+<tr class="even">
 <td style="text-align: right;">213</td>
 <td style="text-align: right;">252</td>
 <td style="text-align: left;">Mustafa&nbsp;Meti̇n&nbsp;Ergen</td>
 <td style="text-align: left;">27-10-25</td>
 <td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">214</td>
+<tr class="odd">
 <td style="text-align: right;">214</td>
 <td style="text-align: right;">253</td>
 <td style="text-align: left;">Ferhat&nbsp;Bayir</td>
 <td style="text-align: left;">27-10-25</td>
 <td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">215</td>
+<tr class="even">
 <td style="text-align: right;">215</td>
 <td style="text-align: right;">254</td>
 <td style="text-align: left;">Vedat&nbsp;Çeli̇k</td>
 <td style="text-align: left;">27-10-25</td>
 <td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">98.00</td>
+<td style="text-align: right;">98.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">216</td>
+<tr class="odd">
 <td style="text-align: right;">216</td>
 <td style="text-align: right;">255</td>
 <td style="text-align: left;">Ersi̇n&nbsp;Çeli̇k</td>
 <td style="text-align: left;">27-10-25</td>
 <td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">95.00</td>
+<td style="text-align: right;">95.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">217</td>
+<tr class="even">
 <td style="text-align: right;">217</td>
 <td style="text-align: right;">256</td>
 <td style="text-align: left;">Şafak&nbsp;Çağlar</td>
 <td style="text-align: left;">27-10-25</td>
 <td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">97.00</td>
+<td style="text-align: right;">97.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">218</td>
+<tr class="odd">
 <td style="text-align: right;">218</td>
 <td style="text-align: right;">258</td>
 <td style="text-align: left;">Yusuf&nbsp;Albayrak</td>
 <td style="text-align: left;">03-11-25</td>
 <td style="text-align: left;">Gebze&nbsp;9</td>
-<td style="text-align: right;">96.00</td>
+<td style="text-align: right;">96.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">219</td>
+<tr class="even">
 <td style="text-align: right;">219</td>
 <td style="text-align: right;">259</td>
 <td style="text-align: left;">H.&nbsp;Yasi̇r&nbsp;Aydin</td>
 <td style="text-align: left;">03-11-25</td>
 <td style="text-align: left;">Gebze&nbsp;9</td>
-<td style="text-align: right;">86.00</td>
+<td style="text-align: right;">86.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">220</td>
+<tr class="odd">
 <td style="text-align: right;">220</td>
 <td style="text-align: right;">260</td>
 <td style="text-align: left;">Varol&nbsp;Türker</td>
 <td style="text-align: left;">03-11-25</td>
 <td style="text-align: left;">Gebze&nbsp;9</td>
-<td style="text-align: right;">82.00</td>
+<td style="text-align: right;">82.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">221</td>
+<tr class="even">
 <td style="text-align: right;">221</td>
 <td style="text-align: right;">261</td>
 <td style="text-align: left;">Furkan&nbsp;Keri̇m&nbsp;Küzeci̇</td>
 <td style="text-align: left;">03-11-25</td>
 <td style="text-align: left;">Gebze&nbsp;9</td>
-<td style="text-align: right;">85.00</td>
+<td style="text-align: right;">85.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">222</td>
+<tr class="odd">
 <td style="text-align: right;">222</td>
 <td style="text-align: right;">263</td>
 <td style="text-align: left;">Kubi̇lay&nbsp;Karabaş</td>
 <td style="text-align: left;">03-11-25</td>
 <td style="text-align: left;">Gebze&nbsp;9</td>
-<td style="text-align: right;">83.00</td>
+<td style="text-align: right;">83.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">223</td>
+<tr class="even">
 <td style="text-align: right;">223</td>
 <td style="text-align: right;">264</td>
 <td style="text-align: left;">Yunus&nbsp;Gül</td>
 <td style="text-align: left;">03-11-25</td>
 <td style="text-align: left;">Gebze&nbsp;9</td>
-<td style="text-align: right;">86.00</td>
+<td style="text-align: right;">86.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">224</td>
+<tr class="odd">
 <td style="text-align: right;">224</td>
 <td style="text-align: right;">265</td>
 <td style="text-align: left;">Abdurrahman&nbsp;Kaya</td>
 <td style="text-align: left;">03-11-25</td>
 <td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">98.00</td>
+<td style="text-align: right;">98.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">225</td>
+<tr class="even">
 <td style="text-align: right;">225</td>
 <td style="text-align: right;">266</td>
 <td style="text-align: left;">Yakup&nbsp;Doğan</td>
 <td style="text-align: left;">03-11-25</td>
 <td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">98.00</td>
+<td style="text-align: right;">98.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">226</td>
+<tr class="odd">
 <td style="text-align: right;">226</td>
 <td style="text-align: right;">267</td>
 <td style="text-align: left;">Derya&nbsp;İlhan</td>
 <td style="text-align: left;">03-11-25</td>
 <td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">97.00</td>
+<td style="text-align: right;">97.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">227</td>
+<tr class="even">
 <td style="text-align: right;">227</td>
 <td style="text-align: right;">268</td>
 <td style="text-align: left;">Berk&nbsp;Demi̇rçay</td>
 <td style="text-align: left;">03-11-25</td>
 <td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">228</td>
+<tr class="odd">
 <td style="text-align: right;">228</td>
 <td style="text-align: right;">269</td>
 <td style="text-align: left;">Abdurrahman&nbsp;Aydin</td>
 <td style="text-align: left;">03-11-25</td>
 <td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">229</td>
+<tr class="even">
 <td style="text-align: right;">229</td>
 <td style="text-align: right;">270</td>
 <td style="text-align: left;">Yağmur&nbsp;Çeği̇l</td>
 <td style="text-align: left;">03-11-25</td>
 <td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">85.00</td>
+<td style="text-align: right;">85.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">230</td>
+<tr class="odd">
 <td style="text-align: right;">230</td>
 <td style="text-align: right;">271</td>
 <td style="text-align: left;">Zeki̇&nbsp;Sataç</td>
 <td style="text-align: left;">03-11-25</td>
 <td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">95.00</td>
+<td style="text-align: right;">95.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">231</td>
+<tr class="even">
 <td style="text-align: right;">231</td>
 <td style="text-align: right;">272</td>
 <td style="text-align: left;">Soner&nbsp;Ağir</td>
 <td style="text-align: left;">03-11-25</td>
 <td style="text-align: left;">Gebze&nbsp;7</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">232</td>
+<tr class="odd">
 <td style="text-align: right;">232</td>
 <td style="text-align: right;">273</td>
 <td style="text-align: left;">Seydi̇han&nbsp;Işal&nbsp;</td>
 <td style="text-align: left;">26-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Adana&nbsp;</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">233</td>
+<tr class="even">
 <td style="text-align: right;">233</td>
 <td style="text-align: right;">274</td>
 <td style="text-align: left;">Haci&nbsp;Bozan</td>
 <td style="text-align: left;">26-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Adana&nbsp;</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">234</td>
+<tr class="odd">
 <td style="text-align: right;">234</td>
 <td style="text-align: right;">275</td>
 <td style="text-align: left;">Özcan&nbsp;Yavuz&nbsp;</td>
 <td style="text-align: left;">26-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Adana&nbsp;</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">235</td>
+<tr class="even">
 <td style="text-align: right;">235</td>
 <td style="text-align: right;">276</td>
 <td style="text-align: left;">İ.&nbsp;Yavuz</td>
 <td style="text-align: left;">26-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Adana&nbsp;</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">236</td>
+<tr class="odd">
 <td style="text-align: right;">236</td>
 <td style="text-align: right;">277</td>
 <td style="text-align: left;">Murat&nbsp;Kizil</td>
 <td style="text-align: left;">26-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Adana&nbsp;</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">237</td>
+<tr class="even">
 <td style="text-align: right;">237</td>
 <td style="text-align: right;">279</td>
 <td style="text-align: left;">Daiş&nbsp;Çinar</td>
 <td style="text-align: left;">26-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Adana&nbsp;</td>
-<td style="text-align: right;">91.00</td>
+<td style="text-align: right;">91.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">238</td>
+<tr class="odd">
 <td style="text-align: right;">238</td>
 <td style="text-align: right;">280</td>
 <td style="text-align: left;">Ercan&nbsp;Kaçar&nbsp;</td>
 <td style="text-align: left;">26-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Adana&nbsp;</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">239</td>
+<tr class="even">
 <td style="text-align: right;">239</td>
 <td style="text-align: right;">281</td>
 <td style="text-align: left;">Hasan&nbsp;Yilmaz</td>
 <td style="text-align: left;">26-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Adana&nbsp;</td>
-<td style="text-align: right;">94.00</td>
+<td style="text-align: right;">94.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">240</td>
+<tr class="odd">
 <td style="text-align: right;">240</td>
 <td style="text-align: right;">282</td>
 <td style="text-align: left;">Süleyman&nbsp;Kahya</td>
 <td style="text-align: left;">26-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Adana&nbsp;</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">241</td>
+<tr class="even">
 <td style="text-align: right;">241</td>
 <td style="text-align: right;">283</td>
 <td style="text-align: left;">Hayam&nbsp;Kuşar</td>
 <td style="text-align: left;">26-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Adana&nbsp;</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">242</td>
+<tr class="odd">
 <td style="text-align: right;">242</td>
 <td style="text-align: right;">284</td>
 <td style="text-align: left;">Harun&nbsp;Yürkmen</td>
 <td style="text-align: left;">26-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Adana&nbsp;</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">243</td>
+<tr class="even">
 <td style="text-align: right;">243</td>
 <td style="text-align: right;">285</td>
 <td style="text-align: left;">Seçi̇l&nbsp;Gökçe</td>
 <td style="text-align: left;">26-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Adana&nbsp;</td>
-<td style="text-align: right;">94.00</td>
+<td style="text-align: right;">94.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">244</td>
+<tr class="odd">
 <td style="text-align: right;">244</td>
 <td style="text-align: right;">286</td>
 <td style="text-align: left;">Beki̇r&nbsp;Köroğlu</td>
 <td style="text-align: left;">26-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Adana&nbsp;</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">245</td>
+<tr class="even">
 <td style="text-align: right;">245</td>
 <td style="text-align: right;">287</td>
 <td style="text-align: left;">Zeki̇&nbsp;Kizil</td>
 <td style="text-align: left;">26-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Adana&nbsp;</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">246</td>
+<tr class="odd">
 <td style="text-align: right;">246</td>
 <td style="text-align: right;">288</td>
 <td style="text-align: left;">Serkan&nbsp;Zorlu</td>
 <td style="text-align: left;">26-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Adana&nbsp;</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">247</td>
+<tr class="even">
 <td style="text-align: right;">247</td>
 <td style="text-align: right;">289</td>
 <td style="text-align: left;">Ali̇&nbsp;Bodur</td>
 <td style="text-align: left;">26-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Adana&nbsp;</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">248</td>
+<tr class="odd">
 <td style="text-align: right;">248</td>
 <td style="text-align: right;">291</td>
 <td style="text-align: left;">Hakan&nbsp;Uysal</td>
 <td style="text-align: left;">27-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">249</td>
+<tr class="even">
 <td style="text-align: right;">249</td>
 <td style="text-align: right;">292</td>
 <td style="text-align: left;">Savaş&nbsp;Kabadayi</td>
 <td style="text-align: left;">27-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">92.00</td>
+<td style="text-align: right;">92.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">250</td>
+<tr class="odd">
 <td style="text-align: right;">250</td>
 <td style="text-align: right;">293</td>
 <td style="text-align: left;">Bayram&nbsp;Demli̇</td>
 <td style="text-align: left;">27-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">251</td>
+<tr class="even">
 <td style="text-align: right;">251</td>
 <td style="text-align: right;">294</td>
 <td style="text-align: left;">Ömer&nbsp;Ali̇&nbsp;Kurnaz</td>
 <td style="text-align: left;">27-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">99.00</td>
+<td style="text-align: right;">99.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">252</td>
+<tr class="odd">
 <td style="text-align: right;">252</td>
 <td style="text-align: right;">295</td>
 <td style="text-align: left;">Volkan&nbsp;Kartaloğlu</td>
 <td style="text-align: left;">27-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">253</td>
+<tr class="even">
 <td style="text-align: right;">253</td>
 <td style="text-align: right;">296</td>
 <td style="text-align: left;">Haluk&nbsp;Köçekşahi̇n</td>
 <td style="text-align: left;">27-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">98.00</td>
+<td style="text-align: right;">98.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">254</td>
+<tr class="odd">
 <td style="text-align: right;">254</td>
 <td style="text-align: right;">297</td>
 <td style="text-align: left;">Deni̇z&nbsp;Pehli̇van</td>
 <td style="text-align: left;">27-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">255</td>
+<tr class="even">
 <td style="text-align: right;">255</td>
 <td style="text-align: right;">299</td>
 <td style="text-align: left;">Cengi̇z&nbsp;Altuntaş</td>
 <td style="text-align: left;">27-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">256</td>
+<tr class="odd">
 <td style="text-align: right;">256</td>
 <td style="text-align: right;">300</td>
 <td style="text-align: left;">Yaren&nbsp;Güneş</td>
 <td style="text-align: left;">27-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">83.00</td>
+<td style="text-align: right;">83.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">257</td>
+<tr class="even">
 <td style="text-align: right;">257</td>
 <td style="text-align: right;">301</td>
 <td style="text-align: left;">Keremcan&nbsp;Di̇ker</td>
 <td style="text-align: left;">27-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">91.00</td>
+<td style="text-align: right;">91.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">258</td>
+<tr class="odd">
 <td style="text-align: right;">258</td>
 <td style="text-align: right;">302</td>
 <td style="text-align: left;">Celi̇l&nbsp;Çalişkan</td>
 <td style="text-align: left;">27-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">92.00</td>
+<td style="text-align: right;">92.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">259</td>
+<tr class="even">
 <td style="text-align: right;">259</td>
 <td style="text-align: right;">303</td>
 <td style="text-align: left;">Abdullah&nbsp;Kaya</td>
 <td style="text-align: left;">27-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">95.00</td>
+<td style="text-align: right;">95.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">260</td>
+<tr class="odd">
 <td style="text-align: right;">260</td>
 <td style="text-align: right;">304</td>
 <td style="text-align: left;">Hali̇l&nbsp;Karaber</td>
 <td style="text-align: left;">27-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">85.00</td>
+<td style="text-align: right;">85.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">261</td>
+<tr class="even">
 <td style="text-align: right;">261</td>
 <td style="text-align: right;">305</td>
 <td style="text-align: left;">Meli̇h&nbsp;Bozdemi̇r</td>
 <td style="text-align: left;">27-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">93.00</td>
+<td style="text-align: right;">93.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">262</td>
+<tr class="odd">
 <td style="text-align: right;">262</td>
 <td style="text-align: right;">306</td>
 <td style="text-align: left;">İsa&nbsp;Canbaş</td>
 <td style="text-align: left;">27-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">94.00</td>
+<td style="text-align: right;">94.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">263</td>
+<tr class="even">
 <td style="text-align: right;">263</td>
 <td style="text-align: right;">307</td>
 <td style="text-align: left;">Ergün&nbsp;Avaç</td>
 <td style="text-align: left;">27-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">89.00</td>
+<td style="text-align: right;">89.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="even">
-<td style="text-align: right;">264</td>
+<tr class="odd">
 <td style="text-align: right;">264</td>
 <td style="text-align: right;">308</td>
 <td style="text-align: left;">Murat&nbsp;Ekmekçi̇</td>
 <td style="text-align: left;">27-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">86.00</td>
+<td style="text-align: right;">86.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
-<tr class="odd">
-<td style="text-align: right;">265</td>
+<tr class="even">
 <td style="text-align: right;">265</td>
 <td style="text-align: right;">309</td>
 <td style="text-align: left;">Bayram&nbsp;Günler</td>
 <td style="text-align: left;">27-11-25</td>
 <td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">266</td>
-<td style="text-align: right;">266</td>
-<td style="text-align: right;">310</td>
-<td style="text-align: left;">Çağatay&nbsp;Kaya</td>
-<td style="text-align: left;">27-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">85.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">267</td>
-<td style="text-align: right;">267</td>
-<td style="text-align: right;">311</td>
-<td style="text-align: left;">Ali̇&nbsp;Koçak</td>
-<td style="text-align: left;">27-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">96.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">268</td>
-<td style="text-align: right;">268</td>
-<td style="text-align: right;">312</td>
-<td style="text-align: left;">Osman&nbsp;Mahmutoğlu</td>
-<td style="text-align: left;">27-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">90.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">269</td>
-<td style="text-align: right;">269</td>
-<td style="text-align: right;">313</td>
-<td style="text-align: left;">Sai̇t&nbsp;Bulut</td>
-<td style="text-align: left;">27-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">95.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">270</td>
-<td style="text-align: right;">270</td>
-<td style="text-align: right;">314</td>
-<td style="text-align: left;">Ahmet&nbsp;Furkan&nbsp;Zeyrek</td>
-<td style="text-align: left;">27-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">271</td>
-<td style="text-align: right;">271</td>
-<td style="text-align: right;">315</td>
-<td style="text-align: left;">Oğuzhan&nbsp;Yakinkaya</td>
-<td style="text-align: left;">27-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">272</td>
-<td style="text-align: right;">272</td>
-<td style="text-align: right;">316</td>
-<td style="text-align: left;">Fati̇h&nbsp;Muratoğlu</td>
-<td style="text-align: left;">27-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">273</td>
-<td style="text-align: right;">273</td>
-<td style="text-align: right;">317</td>
-<td style="text-align: left;">Selahatti̇n&nbsp;Ercan</td>
-<td style="text-align: left;">27-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">97.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">274</td>
-<td style="text-align: right;">274</td>
-<td style="text-align: right;">318</td>
-<td style="text-align: left;">Ömer&nbsp;Akçan</td>
-<td style="text-align: left;">27-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">275</td>
-<td style="text-align: right;">275</td>
-<td style="text-align: right;">319</td>
-<td style="text-align: left;">Mustafa&nbsp;Ayan</td>
-<td style="text-align: left;">27-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">97.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">276</td>
-<td style="text-align: right;">276</td>
-<td style="text-align: right;">320</td>
-<td style="text-align: left;">Si̇nan&nbsp;Özübek</td>
-<td style="text-align: left;">27-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">277</td>
-<td style="text-align: right;">277</td>
-<td style="text-align: right;">321</td>
-<td style="text-align: left;">Ferhat&nbsp;Çül&nbsp;</td>
-<td style="text-align: left;">27-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">96.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">278</td>
-<td style="text-align: right;">278</td>
-<td style="text-align: right;">322</td>
-<td style="text-align: left;">Deni̇z&nbsp;Kaya&nbsp;</td>
-<td style="text-align: left;">28-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">95.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">279</td>
-<td style="text-align: right;">279</td>
-<td style="text-align: right;">323</td>
-<td style="text-align: left;">Bülent&nbsp;Özbulduk</td>
-<td style="text-align: left;">28-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">80.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">280</td>
-<td style="text-align: right;">280</td>
-<td style="text-align: right;">324</td>
-<td style="text-align: left;">Emrah&nbsp;Evi̇n</td>
-<td style="text-align: left;">28-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">87.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">281</td>
-<td style="text-align: right;">281</td>
-<td style="text-align: right;">325</td>
-<td style="text-align: left;">N.&nbsp;Çalman</td>
-<td style="text-align: left;">28-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">80.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">282</td>
-<td style="text-align: right;">282</td>
-<td style="text-align: right;">326</td>
-<td style="text-align: left;">Ömer&nbsp;Çi̇çek</td>
-<td style="text-align: left;">28-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">96.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">283</td>
-<td style="text-align: right;">283</td>
-<td style="text-align: right;">327</td>
-<td style="text-align: left;">Gökhan&nbsp;Bozkurt</td>
-<td style="text-align: left;">28-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">91.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">284</td>
-<td style="text-align: right;">284</td>
-<td style="text-align: right;">328</td>
-<td style="text-align: left;">Satilmiş&nbsp;Yilmaz</td>
-<td style="text-align: left;">28-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">97.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">285</td>
-<td style="text-align: right;">285</td>
-<td style="text-align: right;">329</td>
-<td style="text-align: left;">Selçuk&nbsp;Aydin</td>
-<td style="text-align: left;">28-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">97.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">286</td>
-<td style="text-align: right;">286</td>
-<td style="text-align: right;">330</td>
-<td style="text-align: left;">Selçuk&nbsp;Koy</td>
-<td style="text-align: left;">28-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">99.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">287</td>
-<td style="text-align: right;">287</td>
-<td style="text-align: right;">331</td>
-<td style="text-align: left;">Murat&nbsp;Canli</td>
-<td style="text-align: left;">28-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">288</td>
-<td style="text-align: right;">288</td>
-<td style="text-align: right;">332</td>
-<td style="text-align: left;">Kazim&nbsp;Sari</td>
-<td style="text-align: left;">28-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">289</td>
-<td style="text-align: right;">289</td>
-<td style="text-align: right;">333</td>
-<td style="text-align: left;">Emrah&nbsp;Kaya</td>
-<td style="text-align: left;">28-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">69.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">290</td>
-<td style="text-align: right;">290</td>
-<td style="text-align: right;">334</td>
-<td style="text-align: left;">Şener&nbsp;Baysiz</td>
-<td style="text-align: left;">28-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">98.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">291</td>
-<td style="text-align: right;">291</td>
-<td style="text-align: right;">335</td>
-<td style="text-align: left;">Erkan&nbsp;Büyükkaya</td>
-<td style="text-align: left;">28-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">67.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">292</td>
-<td style="text-align: right;">292</td>
-<td style="text-align: right;">336</td>
-<td style="text-align: left;">Abdullah&nbsp;Baytemi̇r</td>
-<td style="text-align: left;">28-11-25</td>
-<td style="text-align: left;">Dhl&nbsp;Ankara</td>
-<td style="text-align: right;">99.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">293</td>
-<td style="text-align: right;">293</td>
-<td style="text-align: right;">337</td>
-<td style="text-align: left;">Kadi̇r&nbsp;Döner</td>
-<td style="text-align: left;">01-12-25</td>
-<td style="text-align: left;">Gebze&nbsp;7&nbsp;</td>
-<td style="text-align: right;">96.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">294</td>
-<td style="text-align: right;">294</td>
-<td style="text-align: right;">338</td>
-<td style="text-align: left;">Recep&nbsp;Can</td>
-<td style="text-align: left;">01-12-25</td>
-<td style="text-align: left;">Gebze&nbsp;7&nbsp;</td>
-<td style="text-align: right;">95.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">295</td>
-<td style="text-align: right;">295</td>
-<td style="text-align: right;">339</td>
-<td style="text-align: left;">Temel&nbsp;Tekdul</td>
-<td style="text-align: left;">01-12-25</td>
-<td style="text-align: left;">Gebze&nbsp;7&nbsp;</td>
-<td style="text-align: right;">99.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">296</td>
-<td style="text-align: right;">296</td>
-<td style="text-align: right;">340</td>
-<td style="text-align: left;">Musa&nbsp;Telli̇</td>
-<td style="text-align: left;">01-12-25</td>
-<td style="text-align: left;">Gebze&nbsp;7&nbsp;</td>
-<td style="text-align: right;">97.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">297</td>
-<td style="text-align: right;">297</td>
-<td style="text-align: right;">409</td>
-<td style="text-align: left;">Ferdi̇&nbsp;Polat</td>
-<td style="text-align: left;">02-02-26</td>
-<td style="text-align: left;">Dhl&nbsp;Avrupa&nbsp;3</td>
-<td style="text-align: right;">98.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">298</td>
-<td style="text-align: right;">298</td>
-<td style="text-align: right;">410</td>
-<td style="text-align: left;">Kadi̇r&nbsp;Karakuş</td>
-<td style="text-align: left;">02-02-26</td>
-<td style="text-align: left;">Dhl&nbsp;Avrupa&nbsp;3</td>
-<td style="text-align: right;">87.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">299</td>
-<td style="text-align: right;">299</td>
-<td style="text-align: right;">412</td>
-<td style="text-align: left;">Kenan&nbsp;Bi̇lli̇k</td>
-<td style="text-align: left;">02-02-26</td>
-<td style="text-align: left;">Dhl&nbsp;Avrupa&nbsp;3</td>
-<td style="text-align: right;">94.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">300</td>
-<td style="text-align: right;">300</td>
-<td style="text-align: right;">413</td>
-<td style="text-align: left;">Di̇nçer&nbsp;Kaya</td>
-<td style="text-align: left;">02-02-26</td>
-<td style="text-align: left;">Dhl&nbsp;Avrupa&nbsp;3</td>
-<td style="text-align: right;">94.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">301</td>
-<td style="text-align: right;">301</td>
-<td style="text-align: right;">416</td>
-<td style="text-align: left;">Özer&nbsp;Aydoğan</td>
-<td style="text-align: left;">02-02-26</td>
-<td style="text-align: left;">Dhl&nbsp;Avrupa&nbsp;3</td>
-<td style="text-align: right;">98.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">302</td>
-<td style="text-align: right;">302</td>
-<td style="text-align: right;">417</td>
-<td style="text-align: left;">Mehmet&nbsp;Çukur</td>
-<td style="text-align: left;">02-02-26</td>
-<td style="text-align: left;">Dhl&nbsp;Avrupa&nbsp;3</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">303</td>
-<td style="text-align: right;">303</td>
-<td style="text-align: right;">418</td>
-<td style="text-align: left;">Sercan&nbsp;İnce</td>
-<td style="text-align: left;">02-02-26</td>
-<td style="text-align: left;">Dhl&nbsp;Avrupa&nbsp;3</td>
-<td style="text-align: right;">65.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">304</td>
-<td style="text-align: right;">304</td>
-<td style="text-align: right;">419</td>
-<td style="text-align: left;">Levent&nbsp;Çakar</td>
-<td style="text-align: left;">02-02-26</td>
-<td style="text-align: left;">Dhl&nbsp;Avrupa&nbsp;3</td>
-<td style="text-align: right;">88.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">305</td>
-<td style="text-align: right;">305</td>
-<td style="text-align: right;">420</td>
-<td style="text-align: left;">Sali̇h&nbsp;Küçükkaraca</td>
-<td style="text-align: left;">04-02-26</td>
-<td style="text-align: left;">Dhl&nbsp;Alemdağ</td>
-<td style="text-align: right;">94.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">306</td>
-<td style="text-align: right;">306</td>
-<td style="text-align: right;">421</td>
-<td style="text-align: left;">Turan&nbsp;Buran</td>
-<td style="text-align: left;">04-02-26</td>
-<td style="text-align: left;">Dhl&nbsp;Alemdağ</td>
-<td style="text-align: right;">95.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">307</td>
-<td style="text-align: right;">307</td>
-<td style="text-align: right;">422</td>
-<td style="text-align: left;">Furkan&nbsp;Yasi̇n&nbsp;Gökçe</td>
-<td style="text-align: left;">04-02-26</td>
-<td style="text-align: left;">Dhl&nbsp;Alemdağ</td>
-<td style="text-align: right;">91.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">308</td>
-<td style="text-align: right;">308</td>
-<td style="text-align: right;">423</td>
-<td style="text-align: left;">Öztürk&nbsp;Önal</td>
-<td style="text-align: left;">04-02-26</td>
-<td style="text-align: left;">Dhl&nbsp;Alemdağ</td>
-<td style="text-align: right;">90.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">309</td>
-<td style="text-align: right;">309</td>
-<td style="text-align: right;">424</td>
-<td style="text-align: left;">Muhammet&nbsp;Parlayan</td>
-<td style="text-align: left;">04-02-26</td>
-<td style="text-align: left;">Dhl&nbsp;Alemdağ</td>
-<td style="text-align: right;">94.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">310</td>
-<td style="text-align: right;">310</td>
-<td style="text-align: right;">425</td>
-<td style="text-align: left;">Si̇nan&nbsp;Tepe</td>
-<td style="text-align: left;">04-02-26</td>
-<td style="text-align: left;">Dhl&nbsp;Alemdağ</td>
-<td style="text-align: right;">90.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">311</td>
-<td style="text-align: right;">311</td>
-<td style="text-align: right;">426</td>
-<td style="text-align: left;">Bi̇lal&nbsp;Akyilmaz</td>
-<td style="text-align: left;">04-02-26</td>
-<td style="text-align: left;">Dhl&nbsp;Alemdağ</td>
-<td style="text-align: right;">99.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">312</td>
-<td style="text-align: right;">312</td>
-<td style="text-align: right;">427</td>
-<td style="text-align: left;">Ramazan&nbsp;Yildiz</td>
-<td style="text-align: left;">04-02-26</td>
-<td style="text-align: left;">Dhl&nbsp;Alemdağ</td>
-<td style="text-align: right;">95.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">313</td>
-<td style="text-align: right;">313</td>
-<td style="text-align: right;">428</td>
-<td style="text-align: left;">Bariş&nbsp;Alanyali</td>
-<td style="text-align: left;">04-02-26</td>
-<td style="text-align: left;">Dhl&nbsp;Alemdağ</td>
-<td style="text-align: right;">99.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: right;">NA</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: left;">Passed</td>
 </tr>
 </tbody>
 </table>
@@ -6063,7 +5001,7 @@ $ Country          &lt;chr&gt; "ESP", "GER", "AUT", "GER", "GER", "FRA", "GER", 
 <h2>Task:</h2>
 <p>A teacher has prepared a class list of students in an Excel file. However, while creating the list, the teacher accidentally added some students multiple times. Since the teacher is not familiar with the R programming language, they would have to check each entry manually, which is very time-consuming.</p>
 <p>The teacher asks for your help. Your task is to use the R programming language to identify and clean the dataset by detecting duplicate entries.</p>
-<p>Using the data cleaning techniques you have learned in R (such as duplicate detection), remove the repeated student records from the dataset. After completing the cleaning process, determine how many unique students are actually in the class and report this number back to the teacher..</p>
+<p>Using the data cleaning techniques you have learned in R (such as duplicate detection), remove the repeated student records from the dataset. After completing the cleaning process, determine how many unique students are actually in the class and report this number back to the teacher.t.</p>
 
 </section></section>
     </div>
