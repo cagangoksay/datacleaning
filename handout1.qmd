@@ -319,7 +319,7 @@ jung_clean <- jung_clean %>%
   arrange(as.Date(TRAINING.DATE, format = "%d-%m-%y")) %>% 
   mutate(ID = row_number()) %>% 
   relocate(ID, .before = 1) |> 
-  select(ID, X, NAMES, TRAINING.DATE, AREA, PRACTICAL.EXAM.RESULTS)
+  select(ID, X, NAMES, AREA, PRACTICAL.EXAM.RESULTS, RESULT)
 
 jung_clean %>% 
   slice(c(1:10, (n() - 9):n()))

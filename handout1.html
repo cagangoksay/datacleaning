@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Cagan Goksay">
-<meta name="dcterms.date" content="2026-05-22">
+<meta name="dcterms.date" content="2026-05-26">
 
 <title>Why Data Cleaning Matters: Methods and Tools in R</title>
 <style>
@@ -131,7 +131,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 22, 2026</p>
+      <p class="date">May 26, 2026</p>
     </div>
   </div>
   
@@ -508,32 +508,32 @@ $ Country          &lt;chr&gt; "ESP", "GER", "AUT", "GER", "GER", "FRA", "GER", 
 <span id="cb18-52"><a href="#cb18-52" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">as.Date</span>(TRAINING.DATE, <span class="at">format =</span> <span class="st">"%d-%m-%y"</span>)) <span class="sc">%&gt;%</span> </span>
 <span id="cb18-53"><a href="#cb18-53" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ID =</span> <span class="fu">row_number</span>()) <span class="sc">%&gt;%</span> </span>
 <span id="cb18-54"><a href="#cb18-54" aria-hidden="true" tabindex="-1"></a>  <span class="fu">relocate</span>(ID, <span class="at">.before =</span> <span class="dv">1</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb18-55"><a href="#cb18-55" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(ID, X, NAMES, TRAINING.DATE, AREA, PRACTICAL.EXAM.RESULTS)</span>
+<span id="cb18-55"><a href="#cb18-55" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(ID, X, NAMES, AREA, PRACTICAL.EXAM.RESULTS, RESULT)</span>
 <span id="cb18-56"><a href="#cb18-56" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-57"><a href="#cb18-57" aria-hidden="true" tabindex="-1"></a>jung_clean <span class="sc">%&gt;%</span> </span>
 <span id="cb18-58"><a href="#cb18-58" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, (<span class="fu">n</span>() <span class="sc">-</span> <span class="dv">9</span>)<span class="sc">:</span><span class="fu">n</span>()))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>    ID   X              NAMES TRAINING.DATE         AREA PRACTICAL.EXAM.RESULTS
-1    1  31      Şenol Koçoğlu      21-04-25      Gebze 7                   97.5
-2    2  32         Murat İreç      21-04-25      Gebze 7                   91.0
-3    3  33          Yavuz Kuş      21-04-25      Gebze 7                   83.0
-4    4  34      Hülya Özdemir      21-04-25      Gebze 7                   67.0
-5    5  35  Abdurrahman Aydın      21-04-25      Gebze 7                   88.0
-6    6  36       Emrah Yılmaz      21-04-25      Gebze 7                   82.0
-7    7  37         Emre Örgüç      21-04-25      Gebze 7                   86.0
-8    8  38           Ümit Baş      21-04-25      Gebze 7                   80.0
-9    9  39        Cüneyt Kara      21-04-25      Gebze 7                   87.0
-10  10  40       Gürkan Yeter      21-04-25      Gebze 7                   83.0
-11 304 419       Levent Çakar      02-02-26 Dhl Avrupa 3                   88.0
-12 305 420  Sali̇h Küçükkaraca      04-02-26  Dhl Alemdağ                   94.0
-13 306 421        Turan Buran      04-02-26  Dhl Alemdağ                   95.0
-14 307 422 Furkan Yasi̇n Gökçe      04-02-26  Dhl Alemdağ                   91.0
-15 308 423        Öztürk Önal      04-02-26  Dhl Alemdağ                   90.0
-16 309 424  Muhammet Parlayan      04-02-26  Dhl Alemdağ                   94.0
-17 310 425         Si̇nan Tepe      04-02-26  Dhl Alemdağ                   90.0
-18 311 426     Bi̇lal Akyilmaz      04-02-26  Dhl Alemdağ                   99.0
-19 312 427     Ramazan Yildiz      04-02-26  Dhl Alemdağ                   95.0
-20 313 428     Bariş Alanyali      04-02-26  Dhl Alemdağ                   99.0</code></pre>
+<pre><code>    ID   X              NAMES         AREA PRACTICAL.EXAM.RESULTS RESULT
+1    1  31      Şenol Koçoğlu      Gebze 7                   97.5 Passed
+2    2  32         Murat İreç      Gebze 7                   91.0 Passed
+3    3  33          Yavuz Kuş      Gebze 7                   83.0 Passed
+4    4  34      Hülya Özdemir      Gebze 7                   67.0 Passed
+5    5  35  Abdurrahman Aydın      Gebze 7                   88.0 Passed
+6    6  36       Emrah Yılmaz      Gebze 7                   82.0 Passed
+7    7  37         Emre Örgüç      Gebze 7                   86.0 Passed
+8    8  38           Ümit Baş      Gebze 7                   80.0 Passed
+9    9  39        Cüneyt Kara      Gebze 7                   87.0 Passed
+10  10  40       Gürkan Yeter      Gebze 7                   83.0 Passed
+11 304 419       Levent Çakar Dhl Avrupa 3                   88.0 Passed
+12 305 420  Sali̇h Küçükkaraca  Dhl Alemdağ                   94.0 Passed
+13 306 421        Turan Buran  Dhl Alemdağ                   95.0 Passed
+14 307 422 Furkan Yasi̇n Gökçe  Dhl Alemdağ                   91.0 Passed
+15 308 423        Öztürk Önal  Dhl Alemdağ                   90.0 Passed
+16 309 424  Muhammet Parlayan  Dhl Alemdağ                   94.0 Passed
+17 310 425         Si̇nan Tepe  Dhl Alemdağ                   90.0 Passed
+18 311 426     Bi̇lal Akyilmaz  Dhl Alemdağ                   99.0 Passed
+19 312 427     Ramazan Yildiz  Dhl Alemdağ                   95.0 Passed
+20 313 428     Bariş Alanyali  Dhl Alemdağ                   99.0 Passed</code></pre>
 </div>
 </div>
 </section>

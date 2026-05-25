@@ -2,7 +2,10 @@
 title: "Why Data Cleaning Matters"
 subtitle: "Methods and Tools in R"
 author: "Cagan Goksay"
-institute: "Fresenius University of Applied Sciences"
+institute: |
+  Fresenius University of Applied Sciences  
+  <br>
+   goeksay.cagan@stud.hs-fresenius.de
 date: today
 
 format:
@@ -10,9 +13,8 @@ format:
     theme: simple
     slide-number: true
     transition: fade
-    html:
-      embed-resources: true
-      self-contained-math: true
+    embed-resources: true
+    self-contained-math: true
 
 execute:
   echo: true
