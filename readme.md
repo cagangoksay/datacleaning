@@ -1,15 +1,21 @@
 ## README
 
-Repository for Data Cleaning Presentation in Data Analysis for Decision Making
-
 <div align="center">
-  
-  <img src="qr.jpeg" width="300">
-    
-Repository for Data Cleaning Presentation in Data Analysis for Decision Making
-  
-  <div align="center">
-    
-    <img src="studentqr.jpeg" width="300">
-      
-    </div>
+
+Data Cleaning Presentation
+
+Repository for the *Data Cleaning Presentation* prepared for the Data Analysis for Decision Making course.
+
+---
+
+Website
+
+<img src="qr.jpeg" width="300" alt="Repository QR Code">
+
+---
+
+nclass Task
+
+<img src="studentqr.jpeg" width="300" alt="Inclass Task QR Code">
+
+</div>
